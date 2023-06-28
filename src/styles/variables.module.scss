@@ -1,0 +1,22 @@
+$black-color: #000000;
+$primary-color: #232536;
+$yellow-color: #fbd050;
+$purple-color: #5a34a9;
+$dark-gray-color: #4c4c4c;
+$medium-gray-color: #6e6f77;
+$gray-color: #f4f4f4;
+$light-gray-color: #f4f0f8;
+$beige-color: #fcf7eb;
+$white-color: #ffffff;
+
+:export {
+  $blackColor: $black-color;
+  $primaryColor: $primary-color;
+  $purpleColor: $purple-color;
+  $darkGrayColor: $dark-gray-color;
+  $mediumGrayColor: $medium-gray-color;
+  $grayColor: $gray-color;
+  $lightGrayColor: $light-gray-color;
+  $beigeColor: $beige-color;
+  $whiteColor: $white-color;
+}
