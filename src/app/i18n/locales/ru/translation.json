@@ -1,18 +1,9 @@
 {
-  "Home": {
-    "title": "Главная",
-    "video": "Видео о нас"
-  },
-  "Blog": {
-    "title": "Блог"
-  },
-  "AboutUs": {
-    "title": "О нас"
-  },
-  "ContactUs": {
-    "title": "Контакты"
-  },
-  "PrivacyPolicy": {
-    "title": "Политика конфиденциальности"
-  }
+  "Home.title": "Главная",
+  "Home.video": "Видео о нас",
+  "Blog.title": "Блог",
+  "Block.title": "БЛОК ТЕКСТ",
+  "AboutUs.title": "О нас",
+  "ContactUs.title": "Контакты",
+  "PrivacyPolicy.title": "Политика конфиденциальности"
 }

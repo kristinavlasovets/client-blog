@@ -1,13 +1,16 @@
+'use client';
+
 import React, { FC } from 'react';
 
 import { PageProps } from '@/types';
 
-import { useTranslation } from '../i18n';
+import { useMyTranslation } from '../i18n/client';
 
 import styles from './page.module.scss';
 
-const Home: FC<PageProps> = async ({ params: { lng } }) => {
-  const { t } = await useTranslation(lng);
+const Home: FC<PageProps> = () => {
+  const { t } = useMyTranslation();
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
