@@ -12,6 +12,9 @@ $white-color: #ffffff;
 $width-xxl: 100%;
 $width-l: 55%;
 
+$padding-xxs: 3%;
+$padding-m: 20%;
+
 $font-size-s: 12px;
 $font-size-ss: 14px;
 $font-size-m: 18px;
@@ -29,6 +32,8 @@ $font-size-m: 18px;
 
   $width-xxl: $width-xxl;
   $width-l: $width-l;
+
+  $padding-xxs: $padding-xxs;
 
   $font-size-s: $font-size-s;
   $font-size-ss: $font-size-ss;

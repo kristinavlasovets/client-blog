@@ -1,10 +1,8 @@
 .header {
+  @include flex-between-center();
   width: $width-xxl;
   height: 80px;
-  padding: 0 3%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 0 $padding-xxs;
   background-color: $primary-color;
   color: $white-color;
 }
@@ -25,6 +23,6 @@
 }
 
 .switcher {
-  padding-left: 20%;
+  padding-left: $padding-m;
   font-size: $font-size-s;
 }

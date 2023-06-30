@@ -21,11 +21,11 @@ const HeaderBase: FC<HeaderProps> = async ({ lng }) => {
         </Trans>
         {languages
           .filter((l) => lng !== l)
-          .map((l, index) => (
-            <span key={l}>
+          .map((language, index) => (
+            <span key={language}>
               {index > 0 && ' or '}
-              <Link href={`/${l}`} key={l}>
-                {l}
+              <Link href={`/${language}`} key={language}>
+                {language}
               </Link>
             </span>
           ))}
