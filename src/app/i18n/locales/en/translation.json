@@ -1,0 +1,18 @@
+{
+  "Home": {
+    "title": "Home",
+    "video": "Video about us"
+  },
+  "Blog": {
+    "title": "Blog"
+  },
+  "AboutUs": {
+    "title": "About us"
+  },
+  "ContactUs": {
+    "title": "Contact us"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy"
+  }
+}

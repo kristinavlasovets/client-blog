@@ -8,3 +8,7 @@ export interface ErrorBoundaryState {
   error?: null | Error;
   errorInfo?: null | { componentStack: string };
 }
+
+export interface PageProps {
+  params: { [key: string]: 'en' | 'ru' };
+}

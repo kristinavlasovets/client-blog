@@ -1,0 +1,18 @@
+{
+  "Home": {
+    "title": "Главная",
+    "video": "Видео о нас"
+  },
+  "Blog": {
+    "title": "Блог"
+  },
+  "AboutUs": {
+    "title": "О нас"
+  },
+  "ContactUs": {
+    "title": "Контакты"
+  },
+  "PrivacyPolicy": {
+    "title": "Политика конфиденциальности"
+  }
+}

@@ -1,0 +1,30 @@
+.header {
+  width: $width-xxl;
+  height: 80px;
+  padding: 0 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary-color;
+  color: $white-color;
+}
+
+.header_title {
+  width: $width-l;
+  display: flex;
+  justify-content: flex-start;
+  color: $white-color;
+}
+
+.header_logo {
+  font-size: $font-size-m;
+}
+
+.header_link {
+  font-size: $font-size-ss;
+}
+
+.switcher {
+  padding-left: 20%;
+  font-size: $font-size-s;
+}

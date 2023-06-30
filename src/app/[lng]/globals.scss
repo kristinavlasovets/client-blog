@@ -7,3 +7,11 @@
   outline: none;
   font-family: 'Sen', sans-serif;
 }
+
+a {
+  color: $white-color;
+}
+
+a:visited {
+  color: $yellow-color;
+}
