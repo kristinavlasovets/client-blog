@@ -11,20 +11,20 @@ import styles from './styles.module.scss';
 const Header: FC<HeaderProps> = async ({ lng }) => {
   const { t } = await useTranslation(lng);
 
-  const pathName = 'privacyPolicy';
+  const path = 'privacyPolicy';
   return (
     <header className={styles.header}>
       <HeaderBase t={t} lng={lng} />
       <Link className={styles.header_link} href={`/${lng}/`}>
         {t('Home.title')}
       </Link>
-      <Link className={styles.header_link} href={`/${lng}/${pathName}`}>
+      <Link className={styles.header_link} href={`/${lng}/${path}`}>
         {t('Blog.title')}
       </Link>
-      <Link className={styles.header_link} href={`/${lng}/${pathName}`}>
+      <Link className={styles.header_link} href={`/${lng}/${path}`}>
         {t('AboutUs.title')}
       </Link>
-      <Link className={styles.header_link} href={`/${lng}/${pathName}`}>
+      <Link className={styles.header_link} href={`/${lng}/${path}`}>
         {t('ContactUs.title')}
       </Link>
       <p>{t('Home.video')}</p>
