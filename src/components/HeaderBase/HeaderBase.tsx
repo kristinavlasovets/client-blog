@@ -20,7 +20,7 @@ const HeaderBase: FC<HeaderProps> = async ({ lng }) => {
           switch from <strong>{lng}</strong> to:{' '}
         </Trans>
         {languages
-          .filter((l) => lng !== l)
+          .filter((language) => lng !== language)
           .map((language, index) => (
             <span key={language}>
               {index > 0 && ' or '}
