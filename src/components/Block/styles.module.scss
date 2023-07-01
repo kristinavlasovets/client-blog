@@ -1,0 +1,8 @@
+.block {
+  @include flex-between-center();
+  width: $width-xxl;
+  height: 200px;
+  padding: 0 $padding-xxs;
+  background-color: $purple-color;
+  color: $white-color;
+}

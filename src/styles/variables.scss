@@ -1,0 +1,41 @@
+$black-color: #000000;
+$primary-color: #232536;
+$yellow-color: #fbd050;
+$purple-color: #5a34a9;
+$dark-gray-color: #4c4c4c;
+$medium-gray-color: #6e6f77;
+$gray-color: #f4f4f4;
+$light-gray-color: #f4f0f8;
+$beige-color: #fcf7eb;
+$white-color: #ffffff;
+
+$width-xxl: 100%;
+$width-l: 55%;
+
+$padding-xxs: 3%;
+$padding-m: 20%;
+
+$font-size-s: 12px;
+$font-size-ss: 14px;
+$font-size-m: 18px;
+
+:export {
+  $black-color: $black-color;
+  $primary-color: $primary-color;
+  $purple-color: $purple-color;
+  $dark-gray-color: $dark-gray-color;
+  $medium-gray-color: $medium-gray-color;
+  $gray-color: $gray-color;
+  $light-gray-color: $light-gray-color;
+  $beige-color: $beige-color;
+  $white-color: $white-color;
+
+  $width-xxl: $width-xxl;
+  $width-l: $width-l;
+
+  $padding-xxs: $padding-xxs;
+
+  $font-size-s: $font-size-s;
+  $font-size-ss: $font-size-ss;
+  $font-size-m: $font-size-m;
+}

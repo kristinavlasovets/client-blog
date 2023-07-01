@@ -1,0 +1,9 @@
+.next
+public
+node_modules
+yarn.lock
+package-lock.json
+next.config.js
+jest.config.js
+jest.setup.js
+__mocks__

@@ -1,0 +1,28 @@
+.header {
+  @include flex-between-center();
+  width: $width-xxl;
+  height: 80px;
+  padding: 0 $padding-xxs;
+  background-color: $primary-color;
+  color: $white-color;
+}
+
+.header_title {
+  width: $width-l;
+  display: flex;
+  justify-content: flex-start;
+  color: $white-color;
+}
+
+.header_logo {
+  font-size: $font-size-m;
+}
+
+.header_link {
+  font-size: $font-size-ss;
+}
+
+.switcher {
+  padding-left: $padding-m;
+  font-size: $font-size-s;
+}
