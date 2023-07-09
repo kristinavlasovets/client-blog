@@ -1,0 +1,60 @@
+.message {
+  margin-bottom: $margin-xs;
+  width: $width-xxl;
+  text-align: center;
+  font-size: 22px;
+  color: $dark-gray-color;
+}
+
+.wrapper {
+  margin: 0 auto;
+  margin-bottom: $margin-xs;
+  width: $width-ml;
+
+  @media (max-width: $tablet) {
+    width: $width-xxl;
+  }
+}
+
+.title {
+  width: $width-xxl;
+  padding-bottom: $padding-xs;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: -2px;
+  color: $primary-color;
+
+  border-bottom: 1px solid $gray-color;
+}
+
+.pagination {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: $primary-color;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 250ms;
+
+  &:hover {
+    color: $yellow-color;
+    transform: translateX(-10px);
+  }
+}
+
+.disabled {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0;
+  color: $medium-gray-color;
+}

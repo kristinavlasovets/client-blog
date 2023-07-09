@@ -1,0 +1,39 @@
+.category {
+  width: 296px;
+  border: 1px solid $gray-color;
+  padding: $padding-s;
+  transition: all 0.8s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $yellow-color;
+  }
+
+  @media (max-width: $tablet) {
+    width: $width-ll;
+  }
+}
+
+.image {
+  margin-bottom: $margin-xs;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background-color: $beige-color;
+  border-radius: 10px;
+}
+
+.title {
+  margin-bottom: $margin-xs;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -1px;
+  color: $primary-color;
+}
+
+.info {
+  font-size: 16px;
+  line-height: 28px;
+  color: $medium-gray-color;
+}

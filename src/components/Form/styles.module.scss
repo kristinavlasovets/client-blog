@@ -1,0 +1,126 @@
+.wrapper {
+  width: $width-xxl;
+  margin: $margin-xs 0 $margin-xs;
+}
+
+.form {
+  @include flex-between-center();
+  margin: 0 auto;
+  width: $width-xxl;
+
+  @media (max-width: $laptop) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+  width: $width-xxl;
+  min-width: 200px;
+
+  @media (max-width: $tablet) {
+    min-width: 150px;
+  }
+}
+
+.input {
+  width: $width-xxl;
+  height: $height-ss;
+  background: transparent;
+  padding: $padding-xxs;
+  font-size: 16px;
+  border: 1px solid $dark-gray-color;
+  color: $dark-gray-color;
+
+  &::placeholder {
+    color: $dark-gray-color;
+  }
+
+  &:focus {
+    border: 1px solid $yellow-color;
+  }
+}
+
+.textarea {
+  width: $width-xxl;
+  height: $height-m;
+  background: transparent;
+  padding: $padding-xxs;
+  font-size: 16px;
+  border: 1px solid $dark-gray-color;
+  color: $dark-gray-color;
+
+  resize: none;
+
+  &::placeholder {
+    color: $dark-gray-color;
+  }
+
+  &:focus {
+    border: 1px solid $yellow-color;
+  }
+}
+
+.select {
+  width: $width-xxl;
+  background: transparent;
+  padding: $padding-xxs;
+  font-size: 16px;
+  border: 1px solid $dark-gray-color;
+  color: $dark-gray-color;
+
+  &:focus {
+    border: 1px solid $yellow-color;
+  }
+}
+
+.button {
+  width: $width-xxl;
+  height: $height-s;
+  background-color: $yellow-color;
+  font-size: 18px;
+  font-weight: 700;
+  color: $primary-color;
+  border: none;
+  cursor: pointer;
+  transition: all 0.8s;
+
+  &:hover {
+    background-color: $dark-yellow-color;
+    transform: translateY(8px);
+  }
+}
+
+.alert {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: $purple-color;
+  color: $beige-color;
+  font-size: 16px;
+  border-radius: 10px;
+  opacity: 0.8;
+  border: none;
+  cursor: pointer;
+
+  z-index: 1000;
+}
+
+.errorMessage {
+  margin: $margin-xxxs 0 $margin-xxxs;
+  color: $purple-color;
+
+  p {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $yellow-color;
+    }
+  }
+}

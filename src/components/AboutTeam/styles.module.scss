@@ -1,0 +1,71 @@
+.wrapper {
+  @include flex-between-center();
+  margin-top: $margin-xs;
+  width: $width-xxl;
+}
+
+.image {
+  width: $width-mm;
+  position: relative;
+  aspect-ratio: 4/3;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.shape {
+  position: relative;
+  width: 70px;
+  aspect-ratio: 1/1;
+
+  @media (max-width: $laptop) {
+    display: none;
+  }
+}
+
+.content {
+  width: $width-mm;
+  color: $primary-color;
+
+  @media (max-width: $tablet) {
+    width: $width-xxl;
+  }
+}
+
+.label {
+  margin-bottom: $margin-xs;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -2px;
+
+  @media (max-width: $tablet) {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+}
+
+.title {
+  margin-bottom: $margin-xs;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+}
+
+.text {
+  font-size: 16px;
+  line-height: 28px;
+
+  @media (max-width: $tablet) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

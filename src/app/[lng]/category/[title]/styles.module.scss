@@ -1,0 +1,28 @@
+.wrapper {
+  width: $width-xxl;
+
+  @media (max-width: $tablet) {
+    justify-content: center;
+  }
+}
+
+.content {
+  width: $width-xxl;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+  @media (max-width: $tablet) {
+    width: $width-ll;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.posts {
+  width: $width-ml;
+
+  @media (max-width: $tablet) {
+    width: $width-xxl;
+  }
+}

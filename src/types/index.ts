@@ -1,7 +1,9 @@
-export interface PageProps {
-  params: { [key: string]: 'en' | 'ru' };
-}
+import { Translation } from '@/app/i18n/client';
 
 export interface LanguageProps {
-  lng: 'en' | 'ru';
+  lng: keyof Translation;
+}
+
+export interface PageProps {
+  params: LanguageProps;
 }

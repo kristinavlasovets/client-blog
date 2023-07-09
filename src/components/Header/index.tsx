@@ -1,33 +1,43 @@
-import React, { FC } from 'react';
-import Link from 'next/link';
+'use client';
 
-import { serverTranslation } from '@/app/i18n/client';
+import React, { FC } from 'react';
+import dynamic from 'next/dynamic';
+
+import { useMyTranslation } from '@/app/i18n/client';
+import { usePortal } from '@/hooks/usePortal';
 
 import HeaderBase from '../HeaderBase/HeaderBase';
+import NavMenu from '../NavMenu';
+import VideoModal from '../VideoModal';
 
 import { HeaderProps } from './types';
 
 import styles from './styles.module.scss';
 
+const DynamicPortal = dynamic(() => import('../Portal'), { ssr: false });
+
 const Header: FC<HeaderProps> = ({ lng }) => {
-  const { t } = serverTranslation(lng);
-  const path = 'privacyPolicy';
+  const { t } = useMyTranslation();
+
+  const { state, onOpenPortal } = usePortal();
+
   return (
     <header className={styles.header}>
-      <HeaderBase lng={lng} />
-      <Link className={styles.header_link} href={`/${lng}/`}>
-        {t('Home.title')}
-      </Link>
-      <Link className={styles.header_link} href={`/${lng}/${path}`}>
-        {t('Blog.title')}
-      </Link>
-      <Link className={styles.header_link} href={`/${lng}/${path}`}>
-        {t('AboutUs.title')}
-      </Link>
-      <Link className={styles.header_link} href={`/${lng}/${path}`}>
-        {t('ContactUs.title')}
-      </Link>
-      <p>{t('Home.video')}</p>
+      <div className={styles.wrapper}>
+        <div className={styles.navbar}>
+          <span className={styles.title}>Modsen Client Blog</span>
+          <HeaderBase lng={lng} />
+          <div className={styles.links}>
+            <NavMenu variant="header" />
+            <button type="button" className={styles.button} onClick={onOpenPortal}>
+              {t('Home.video')}
+            </button>
+          </div>
+        </div>
+      </div>
+      <DynamicPortal isVisible={state}>
+        <VideoModal />
+      </DynamicPortal>
     </header>
   );
 };

@@ -1,0 +1,24 @@
+.wrapper {
+  margin: $margin-xs auto $margin-xs;
+  width: $width-ll;
+}
+
+.title {
+  margin-bottom: $margin-xs;
+  width: $width-xxl;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -2px;
+  color: $primary-color;
+}
+
+.content {
+  width: $width-xxl;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { dir } from 'i18next';
 
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
 import { languages } from '../i18n/settings';
@@ -28,7 +29,8 @@ export default function RootLayout({
       <head />
       <body>
         <Header lng={lng} />
-        {children}
+        <main>{children}</main>
+        <Footer lng={lng} />
       </body>
     </html>
   );

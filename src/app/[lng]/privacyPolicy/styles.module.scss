@@ -1,0 +1,56 @@
+.wrapper {
+  width: $width-xxl;
+  color: $primary-color;
+}
+
+.header {
+  width: $width-xxl;
+  height: 256px;
+  background-color: $lavender-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.lastUpdate {
+  margin-top: 20px;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.content {
+  width: $width-xxl;
+  padding: $padding-s 0 $padding-s;
+}
+
+.article {
+  width: $width-ll;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.articleTitle {
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.articleSubtitle {
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.articleText {
+  margin-bottom: 36px;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+}

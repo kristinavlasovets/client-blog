@@ -1,0 +1,18 @@
+.wrapper {
+  width: 100px;
+
+  @media (max-width: $tablet) {
+    margin: $margin-xs auto $margin-xs;
+  }
+}
+
+.switcher {
+  @include flex-between-center();
+  padding-left: $padding-m;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.currentLng {
+  color: $yellow-color;
+}

@@ -1,0 +1,35 @@
+.wrapper {
+  width: $width-xxl;
+  margin: $margin-xs auto $margin-xs;
+}
+
+.title {
+  margin-bottom: $margin-xs;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -2px;
+
+  @media (max-width: $tablet) {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
+
+.grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 32px;
+  row-gap: 32px;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

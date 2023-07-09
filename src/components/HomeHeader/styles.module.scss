@@ -1,0 +1,111 @@
+.wrapper {
+  margin-bottom: $margin-xs;
+  width: $width-xxl;
+  padding: $padding-s 0;
+  background-size: cover !important;
+  color: $white-color;
+}
+
+.header {
+  width: $width-ll;
+  margin: 0 auto;
+}
+
+.label {
+  margin-bottom: $margin-xxxs;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  a {
+    margin-left: 5px;
+    color: $white-color;
+    font-weight: 900;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: $yellow-color;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: $margin-xs;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.title {
+  margin-bottom: $margin-xxxs;
+  display: block;
+  width: $width-ml;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -2px;
+  color: $white-color;
+  transition: all 0.8s;
+  cursor: pointer;
+
+  &:hover {
+    color: $yellow-color;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    width: $width-ll;
+  }
+}
+
+.preview {
+  margin-bottom: $margin-xxxs;
+  width: $width-l;
+  font-size: 16px;
+  line-height: 28px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: $margin-xs;
+    font-size: 12px;
+    line-height: 14px;
+    width: $width-ll;
+  }
+}
+
+.info {
+  margin-bottom: $margin-xxxs;
+  font-size: 14px;
+  font-weight: 500;
+  color: $white-color;
+
+  a {
+    color: $yellow-color;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $purple-color;
+    }
+  }
+}
+
+.button {
+  @include flex-center-center();
+  width: 204px;
+  height: 56px;
+  background: $yellow-color;
+  font-size: 18px;
+  font-weight: 700;
+  color: $primary-color;
+  line-height: 24px;
+  transition: transform 250ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $dark-yellow-color;
+    transform: translateX(10px);
+  }
+}

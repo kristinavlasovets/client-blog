@@ -1,0 +1,15 @@
+.wrapper {
+  @include position-center;
+  position: fixed;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+
+  z-index: 1000;
+}
+
+.video {
+  border: none;
+}

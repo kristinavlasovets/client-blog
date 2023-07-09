@@ -1,0 +1,48 @@
+.wrapper {
+  padding: $padding-xs;
+  transition: all 0.8s;
+
+  &:hover {
+    background-color: $beige-color;
+  }
+}
+
+.info {
+  margin-bottom: $margin-xxxs;
+  font-size: 14px;
+  font-weight: 500;
+  color: $medium-gray-color;
+
+  a {
+    color: $purple-color;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $yellow-color;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+.title {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: $primary-color;
+  line-height: 32px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $yellow-color;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}

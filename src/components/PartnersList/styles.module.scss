@@ -1,0 +1,39 @@
+.wrapper {
+  @include flex-between-center();
+  margin: $margin-xs auto;
+  width: $width-ll;
+  color: $medium-gray-color;
+
+  @media (max-width: $tablet) {
+    @include flex-column-center();
+    width: $width-xxl;
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+
+  @media (max-width: $tablet) {
+    @include flex-column-center();
+    margin-top: $margin-xs;
+    margin-bottom: $margin-xs;
+  }
+}
+.icon {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  @media (max-width: $tablet) {
+    margin: $margin-xs auto;
+  }
+}

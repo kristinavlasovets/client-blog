@@ -1,0 +1,86 @@
+.wrapper {
+  width: $width-l;
+  margin: $margin-xs auto $margin-xs;
+}
+
+.heading {
+  margin-bottom: $margin-xs;
+  width: $width-xxl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $primary-color;
+}
+
+.title {
+  margin-bottom: $margin-xs;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  margin-bottom: $margin-xs;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 28px;
+  color: $medium-gray-color;
+  text-align: center;
+}
+
+.info {
+  margin: $margin-xs auto $margin-xs;
+  width: $width-xxl;
+  padding: $padding-xs 0 $padding-xs;
+  background-color: $purple-color;
+}
+
+.infoWrapper {
+  width: $width-ll;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.chapter {
+  width: $width-m;
+  padding-left: $padding-xxs;
+}
+
+.chapterTitle {
+  margin-bottom: $margin-xs;
+  padding-bottom: $padding-s;
+  font-size: 14px;
+  color: $gray-color;
+  opacity: 0.6;
+  width: 90%;
+
+  border-bottom: 1px solid $gray-color;
+}
+
+.chapterText {
+  padding-bottom: $padding-xxs;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  color: $white-color;
+}
+
+.chapterNote {
+  font-size: 16px;
+  color: $gray-color;
+  opacity: 0.6;
+  line-height: 28px;
+}

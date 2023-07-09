@@ -1,0 +1,10 @@
+.wrapper {
+  margin: 0 auto;
+  margin-top: $margin-s;
+  width: $width-ll;
+  position: relative;
+
+  @media (max-width: $tablet) {
+    margin-top: $margin-xs;
+  }
+}

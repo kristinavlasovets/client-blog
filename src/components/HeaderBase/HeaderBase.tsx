@@ -7,27 +7,26 @@ import { languages } from '@/app/i18n/settings';
 
 import { HeaderProps } from '../Header/types';
 
-import styles from '../Header/styles.module.scss';
+import styles from './styles.module.scss';
 
 const HeaderBase: FC<HeaderProps> = async ({ lng }) => {
   const { t } = await useTranslation(lng);
 
   return (
-    <div className={styles.header_title}>
-      <p className={styles.header_logo}>Modsen Client Blog</p>
+    <div className={styles.wrapper}>
       <div className={styles.switcher}>
         <Trans i18nKey="languageSwitcher" t={t}>
-          switch from <strong>{lng}</strong> to:{' '}
+          <p className={styles.currentLng}>{lng}</p> |{' '}
         </Trans>
         {languages
           .filter((language) => lng !== language)
           .map((language, index) => (
-            <span key={language}>
+            <p key={language}>
               {index > 0 && ' or '}
               <Link href={`/${language}`} key={language}>
                 {language}
               </Link>
-            </span>
+            </p>
           ))}
       </div>
     </div>

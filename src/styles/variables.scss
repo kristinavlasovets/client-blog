@@ -1,41 +1,97 @@
 $black-color: #000000;
 $primary-color: #232536;
 $yellow-color: #fbd050;
+$dark-yellow-color: #eec14a;
 $purple-color: #5a34a9;
 $dark-gray-color: #4c4c4c;
+$blue-gray-color: #2e3040;
 $medium-gray-color: #6e6f77;
 $gray-color: #f4f4f4;
-$light-gray-color: #f4f0f8;
+$lavender-color: #f4f0f8;
 $beige-color: #fcf7eb;
 $white-color: #ffffff;
 
 $width-xxl: 100%;
+$width-xl: 95%;
+$width-ll: 90%;
+$width-ml: 70%;
 $width-l: 55%;
+$width-ss: 50%;
+$width-mm: 45%;
+$width-m: 40%;
+$width-s: 35%;
+$width-xs: 30%;
+$width-xss: 20%;
+$width-xxs: 15%;
 
-$padding-xxs: 3%;
+$height-s: 56px;
+$height-ss: 76px;
+$height-m: 144px;
+
+$margin-xxxs: 2%;
+$margin-xs: 6%;
+$margin-s: 10%;
+
+$padding-xxs: 4%;
+$padding-xs: 6%;
+$padding-s: 10%;
 $padding-m: 20%;
 
 $font-size-s: 12px;
 $font-size-ss: 14px;
 $font-size-m: 18px;
 
+$mobile: 495px;
+$tablet: 768px;
+$laptop: 1024px;
+$bigScreen: 1920px;
+
 :export {
   $black-color: $black-color;
   $primary-color: $primary-color;
+  $dark-yellow-color: $dark-yellow-color;
+  $yellow-color: $yellow-color;
   $purple-color: $purple-color;
   $dark-gray-color: $dark-gray-color;
+  $blue-gray-color: $blue-gray-color;
   $medium-gray-color: $medium-gray-color;
   $gray-color: $gray-color;
-  $light-gray-color: $light-gray-color;
+  $lavender-color: $lavender-color;
   $beige-color: $beige-color;
   $white-color: $white-color;
 
   $width-xxl: $width-xxl;
+  $width-xl: $width-xl;
+  $width-ll: $width-ll;
+  $width-ml: $width-ml;
   $width-l: $width-l;
+  $width-ss: $width-ss;
+  $width-mm: $width-mm;
+  $width-m: $width-m;
+  $width-s: $width-s;
+  $width-xs: $width-xs;
+  $width-xss: $width-xss;
+  $width-xxs: $width-xxs;
+
+  $height-s: $height-s;
+  $height-ss: $height-ss;
+  $height-m: $height-m;
+
+  $margin-xxxs: $margin-xxxs;
+  $margin-xs: $margin-xs;
+  $margin-s: $margin-s;
 
   $padding-xxs: $padding-xxs;
+  $padding-xs: $padding-xs;
+  $padding-s: $padding-s;
+  $padding-m: $padding-m;
 
   $font-size-s: $font-size-s;
   $font-size-ss: $font-size-ss;
   $font-size-m: $font-size-m;
+
+  $mobile: $mobile;
+  $tablet: $tablet;
+  $laptop: $laptop;
+  $bigScreen: $bigScreen;
 }

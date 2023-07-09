@@ -1,0 +1,87 @@
+.wrapper {
+  margin-top: $margin-xs;
+  width: $width-xxl;
+  border: 1px solid $gray-color;
+  padding: $padding-xs;
+}
+
+.image {
+  margin-bottom: $margin-xs;
+  position: relative;
+  margin: 0 auto;
+  width: $width-xxl;
+  aspect-ratio: 16/9;
+}
+
+.info {
+  margin-top: $margin-xs;
+  margin-bottom: $margin-xxxs;
+  font-size: 14px;
+  font-weight: 500;
+  color: $medium-gray-color;
+
+  a {
+    color: $purple-color;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $yellow-color;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.title {
+  margin-bottom: $margin-xxxs;
+  display: block;
+  font-size: 28px;
+  color: $primary-color;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -1px;
+
+  @media (max-width: $mobile) {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+}
+
+.preview {
+  margin-bottom: $margin-xs;
+  font-size: 16px;
+  color: $medium-gray-color;
+  line-height: 28px;
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.button {
+  @include flex-center-center();
+  margin-top: $margin-xs;
+  width: $width-s;
+  height: $height-s;
+  background: $yellow-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $primary-color;
+  transition: transform 250ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $dark-yellow-color;
+    transform: translateX(10px);
+  }
+
+  @media (max-width: $tablet) {
+    width: $width-l;
+  }
+}
