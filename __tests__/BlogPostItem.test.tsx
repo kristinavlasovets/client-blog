@@ -16,7 +16,7 @@ const propsInEnglish: BlogPostItemProps = {
     authorId: 0,
     id: 0,
     image: '/assets/images/macbook-man.png',
-    createdAt: '2023-07-01T14:20:00.000Z',
+    createdAt: 'May 23, 2022',
   },
 };
 
@@ -31,7 +31,7 @@ const propsInRussian: BlogPostItemProps = {
     authorId: 0,
     id: 0,
     image: '/assets/images/macbook-man.png',
-    createdAt: '2023-07-01T14:20:00.000Z',
+    createdAt: 'May 23, 2022',
   },
 };
 

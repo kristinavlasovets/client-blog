@@ -1,6 +1,6 @@
 .navMenu {
-  width: $width-xxl;
   @include flex-between-center();
+  width: $width-xxl;
 
   a {
     color: $white-color;
@@ -21,4 +21,23 @@
   text-decoration: underline;
   text-decoration-color: $yellow-color;
   text-underline-offset: 10px;
+}
+
+.burger {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+  @media (max-width: $tablet) {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 }

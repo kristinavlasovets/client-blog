@@ -2,7 +2,7 @@ import PostItem from '@/components/PostItem';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof PostItem> = {
-  title: 'Component',
+  title: 'PostItem Component',
   component: PostItem,
 };
 

@@ -25,7 +25,7 @@ const FeaturedBlogPost: FC<LanguageProps> = ({ lng }) => {
       </p>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.preview}>{preview}</p>
-      <Link href={`/blogPost/${id}`} className={styles.button}>
+      <Link href={`/blogPost/${id}`} className={styles.button} data-cy="featuredPost-button">
         {t('BlogHeader.button')}
       </Link>
     </div>

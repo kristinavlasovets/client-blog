@@ -1,4 +1,7 @@
+'use client';
+
 import React, { FC } from 'react';
+import dynamic from 'next/dynamic';
 
 import { serverTranslation } from '@/app/i18n/client';
 import Form from '@/components/Form';
@@ -6,9 +9,9 @@ import { PageProps } from '@/types';
 
 import styles from './styles.module.scss';
 
-// const Map = dynamic(() => import('@/components/Map'), {
-//   ssr: false,
-// });
+const Map = dynamic(() => import('@/components/Map'), {
+  ssr: false,
+});
 
 const ContactUs: FC<PageProps> = ({ params: { lng } }) => {
   const { t } = serverTranslation(lng);
@@ -37,7 +40,7 @@ const ContactUs: FC<PageProps> = ({ params: { lng } }) => {
         </div>
         <Form />
       </div>
-      {/* <Map /> */}
+      <Map />
     </>
   );
 };

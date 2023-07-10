@@ -13,13 +13,7 @@ const PostItem: FC<Post> = (props) => {
     <Link href={`/blogPost/${id}`}>
       <div className={styles.wrapper}>
         <div className={styles.image}>
-          <Image
-            src={image}
-            alt={title}
-            fill
-            style={{ objectFit: 'cover' }}
-            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          <Image src={image} alt={title} fill style={{ objectFit: 'cover' }} />
         </div>
         <div className={styles.content}>
           <p className={styles.category}>{category}</p>

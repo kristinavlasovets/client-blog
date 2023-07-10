@@ -13,4 +13,5 @@ export const icons = {
   partner5: <Image src="/assets/icons/logo5.svg" alt="partner5" width={136} height={32} />,
   back: <Image src="/assets/icons/back.svg" alt="back" width={48} height={48} />,
   next: <Image src="/assets/icons/next.svg" alt="next" width={48} height={48} />,
+  burger: <Image src="/assets/icons/burger.svg" alt="burger" width={28} height={28} />,
 };

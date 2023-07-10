@@ -25,7 +25,9 @@ const MisionVision: FC<MisionVisionProps> = ({ variant, lng }) => {
               <p className={styles.label}>{t('Home.aboutLabel')}</p>
               <p className={styles.title}>{t('Home.aboutTitle')}</p>
               <p className={styles.text}>{t('Home.aboutText')}</p>
-              <Link href="/aboutUs">{t('Home.aboutButton')}</Link>
+              <Link href="/aboutUs" data-cy="mission-button">
+                {t('Home.aboutButton')}
+              </Link>
             </>
           )}
         </div>

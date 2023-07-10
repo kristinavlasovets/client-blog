@@ -1,20 +1,18 @@
 'use client';
 
 import React, { FC } from 'react';
-import dynamic from 'next/dynamic';
 
 import { useMyTranslation } from '@/app/i18n/client';
 import { usePortal } from '@/hooks/usePortal';
 
 import HeaderBase from '../HeaderBase/HeaderBase';
 import NavMenu from '../NavMenu';
+import Portal from '../Portal';
 import VideoModal from '../VideoModal';
 
 import { HeaderProps } from './types';
 
 import styles from './styles.module.scss';
-
-const DynamicPortal = dynamic(() => import('../Portal'), { ssr: false });
 
 const Header: FC<HeaderProps> = ({ lng }) => {
   const { t } = useMyTranslation();
@@ -35,9 +33,10 @@ const Header: FC<HeaderProps> = ({ lng }) => {
           </div>
         </div>
       </div>
-      <DynamicPortal isVisible={state}>
+
+      <Portal isVisible={state}>
         <VideoModal />
-      </DynamicPortal>
+      </Portal>
     </header>
   );
 };
