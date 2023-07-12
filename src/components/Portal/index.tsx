@@ -6,9 +6,9 @@ import { createPortal } from 'react-dom';
 import { PortalProps } from './types';
 
 const Portal: FC<PortalProps> = (props) => {
-  const { children, isVisible } = props;
+  const { children, isPortalOpen } = props;
 
-  if (!isVisible) {
+  if (!isPortalOpen) {
     return null;
   }
   return createPortal(<div>{children}</div>, document.body);

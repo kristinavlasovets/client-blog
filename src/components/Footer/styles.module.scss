@@ -32,10 +32,10 @@
 }
 
 .links {
-  width: $width-ss;
-  max-width: $width-ss;
+  width: $width-l;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $laptop) {
+    @include flex-column-center();
     width: $width-xxl;
   }
 }

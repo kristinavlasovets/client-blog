@@ -1,15 +1,15 @@
 import { useState } from 'react';
 
 export const usePortal = () => {
-  const [state, setState] = useState<boolean>(false);
+  const [isPortalOpen, setIsPortalOpen] = useState<boolean>(false);
 
-  const onOpenPortal = () => {
-    setState(true);
+  const handleOpenPortal = () => {
+    setIsPortalOpen(true);
   };
 
-  const onClosePortal = () => {
-    setState(false);
+  const handleClosePortal = () => {
+    setIsPortalOpen(false);
   };
 
-  return { state, onOpenPortal, onClosePortal } as const;
+  return { isPortalOpen, setIsPortalOpen, handleOpenPortal, handleClosePortal } as const;
 };

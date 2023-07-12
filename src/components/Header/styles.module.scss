@@ -38,29 +38,3 @@
   @include flex-between-center();
   width: $width-ss;
 }
-
-.button {
-  width: $width-l;
-  height: 56px;
-  background-color: $white-color;
-  margin-left: 32px;
-  font-size: 18px;
-  font-weight: 700;
-  color: $primary-color;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    background-color: $yellow-color;
-  }
-
-  @media (max-width: $tablet) {
-    margin-bottom: $margin-xs;
-    margin: 0 auto;
-    margin-bottom: $margin-xs;
-    width: $width-ll;
-    height: 30px;
-    font-size: 14px;
-  }
-}

@@ -41,3 +41,46 @@
     right: 20px;
   }
 }
+
+.button {
+  width: $width-l;
+  height: 56px;
+  background-color: $white-color;
+  margin-left: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  color: $primary-color;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $yellow-color;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: $margin-xs;
+    margin: 0 auto;
+    margin-bottom: $margin-xs;
+    width: $width-ll;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+.video_wrapper {
+  @include flex-center-center();
+  position: fixed;
+  width: $width-xxl;
+  height: $height-xxl;
+  left: 0%;
+  bottom: 0%;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  opacity: 1;
+}
+
+.video {
+  border: none;
+}
