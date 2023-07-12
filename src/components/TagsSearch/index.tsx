@@ -57,6 +57,7 @@ const TagsSearch: FC<TagsSearchProps> = ({ handleChooseTag }) => {
         placeholder={t('Category.placeholder')}
         value={value}
         onChange={handleChange}
+        data-testid="tagsSearchInput"
       />
       <button type="button" className={styles.button} onClick={handleSearchTag(value)}>
         {t('Category.button')}
@@ -65,7 +66,7 @@ const TagsSearch: FC<TagsSearchProps> = ({ handleChooseTag }) => {
         <ul className={styles.list}>
           {searchTags.length > 0 ? (
             searchTags.map((tag) => (
-              <li className={styles.item} onClick={handleClickTag(tag)}>
+              <li className={styles.item} onClick={handleClickTag(tag)} key={tag}>
                 {tag}
               </li>
             ))

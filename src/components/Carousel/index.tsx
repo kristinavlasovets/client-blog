@@ -41,6 +41,7 @@ const Carousel: FC = () => {
             type="button"
             className={`${styles.button} ${currentTestimonial !== 0 || styles.disabled}`}
             onClick={handleBack}
+            data-testid="backButton"
           >
             {icons.back}
           </button>
@@ -50,6 +51,7 @@ const Carousel: FC = () => {
               currentTestimonial !== authors.length - 1 || styles.disabled
             }`}
             onClick={handleNext}
+            data-testid="nextButton"
           >
             {icons.next}
           </button>

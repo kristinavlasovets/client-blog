@@ -1,4 +1,5 @@
 .wrapper {
+  @include enter-animation();
   position: relative;
   width: $width-xxl;
   margin: 0 auto;

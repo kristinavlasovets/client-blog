@@ -1,8 +1,11 @@
 import React from 'react';
+import { usePathname } from 'next/navigation';
 
 import CategoriesListItem from '@/components/CategoriesListItem';
 import { CategoriesListItemProps } from '@/components/CategoriesListItem/types';
 import { render, screen } from '@testing-library/react';
+
+jest.mock('next/navigation');
 
 const props: CategoriesListItemProps = {
   category: { title: 'Business', icon: '/assets/icons/business.svg' },
@@ -10,6 +13,7 @@ const props: CategoriesListItemProps = {
 };
 
 describe('CategoriesListItem', () => {
+  (usePathname as jest.Mock).mockImplementation(() => 'en');
   it('renders a CategoriesListItem with the given data', () => {
     render(<CategoriesListItem {...props} />);
 

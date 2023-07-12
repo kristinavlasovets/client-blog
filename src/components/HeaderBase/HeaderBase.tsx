@@ -5,11 +5,11 @@ import { Trans } from 'react-i18next/TransWithoutContext';
 import { useTranslation } from '@/app/i18n';
 import { languages } from '@/app/i18n/settings';
 
-import { HeaderProps } from '../Header/types';
+import { HeaderBaseProps } from './types';
 
 import styles from './styles.module.scss';
 
-const HeaderBase: FC<HeaderProps> = async ({ lng }) => {
+const HeaderBase: FC<HeaderBaseProps> = async ({ lng, translationPath }) => {
   const { t } = await useTranslation(lng);
 
   return (
@@ -23,7 +23,7 @@ const HeaderBase: FC<HeaderProps> = async ({ lng }) => {
           .map((language, index) => (
             <p key={language}>
               {index > 0 && ' or '}
-              <Link href={`/${language}`} key={language}>
+              <Link href={`/${language}/${translationPath}`} key={language}>
                 {language}
               </Link>
             </p>

@@ -1,4 +1,5 @@
 .wrapper {
+  @include enter-animation();
   width: $width-xxl;
   margin: $margin-xs auto $margin-xs;
 }

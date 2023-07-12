@@ -23,7 +23,7 @@ const RelatedBlogPost: FC<RelatedBlogPostProps> = (props) => {
       <div className={styles.image}>
         <Image src={image} alt={title} fill style={{ objectFit: 'cover' }} />
       </div>
-      <p className={styles.info}>
+      <p className={styles.info} data-testid="blopPostInfo">
         {t('BlogHeader.author')} <Link href={`/author/${authorId}`}>{name}</Link> | {createdAt}
       </p>
       <Link className={styles.title} href={`/blogPost/${id}`}>

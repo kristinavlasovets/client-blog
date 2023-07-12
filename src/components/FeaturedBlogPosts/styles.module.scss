@@ -1,5 +1,6 @@
 .wrapper {
   @include flex-between-center();
+  @include enter-animation();
   width: $width-ll;
   margin: 0 auto;
   margin-bottom: $margin-xs;
