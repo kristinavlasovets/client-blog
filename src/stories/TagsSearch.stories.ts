@@ -1,4 +1,4 @@
-import TagsSearch from '@/components/TagsSearch';
+import TagsSearch from '@/components/SearchBlock/TagsSearch';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof TagsSearch> = {

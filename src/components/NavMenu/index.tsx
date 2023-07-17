@@ -10,9 +10,8 @@ import { footerNavMenu, headerNavMenu } from '@/constants/navMenu';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 import { usePortal } from '@/hooks/usePortal';
 
-import Drawer from '../Drawer';
-import Portal from '../Portal';
-
+import Drawer from './Drawer';
+import Portal from './Portal';
 import { NavMenuProps } from './types';
 
 import styles from './styles.module.scss';
@@ -20,7 +19,7 @@ import styles from './styles.module.scss';
 const NavMenu: FC<NavMenuProps> = ({ variant }) => {
   const { t, locale } = useMyTranslation();
 
-  const { isPortalOpen, setIsPortalOpen, handleOpenPortal, handleClosePortal } = usePortal();
+  const { isPortalOpen, setIsPortalOpen, handleTogglePortal } = usePortal();
   const ref = useRef<HTMLDivElement>(null);
 
   const pathName = usePathname();
@@ -28,9 +27,10 @@ const NavMenu: FC<NavMenuProps> = ({ variant }) => {
 
   const [isOpenDrawer, setIsOpenDrawer] = useState<boolean>(false);
 
-  const handleOpenDrawer = () => {
-    setIsOpenDrawer(true);
+  const handleToggleDrawer = () => {
+    setIsOpenDrawer((prevState) => !prevState);
   };
+
   const handleCloseDrawer = () => {
     setIsOpenDrawer(false);
   };
@@ -39,7 +39,7 @@ const NavMenu: FC<NavMenuProps> = ({ variant }) => {
     setIsPortalOpen(isPortalOpen);
   }, [isPortalOpen]);
 
-  useOnClickOutside({ handler: handleClosePortal, ref });
+  useOnClickOutside({ handler: handleTogglePortal, ref });
 
   const navigationMenu = headerVariant ? headerNavMenu : footerNavMenu;
 
@@ -65,7 +65,7 @@ const NavMenu: FC<NavMenuProps> = ({ variant }) => {
                   key={name}
                   href={`/${locale}${path}`}
                   className={isActive ? styles.active : ''}
-                  onClick={handleCloseDrawer}
+                  onClick={handleToggleDrawer}
                 >
                   {t(name)}
                 </Link>
@@ -73,11 +73,11 @@ const NavMenu: FC<NavMenuProps> = ({ variant }) => {
             })}
           </Drawer>
 
-          <button type="button" className={styles.button} onClick={handleOpenPortal}>
+          <button type="button" className={styles.button} onClick={handleTogglePortal}>
             {t('Home.video')}
           </button>
 
-          <button className={styles.burger} type="button" onClick={handleOpenDrawer}>
+          <button className={styles.burger} type="button" onClick={handleToggleDrawer}>
             {icons.burger}
           </button>
 

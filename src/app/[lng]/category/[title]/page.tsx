@@ -1,9 +1,9 @@
 'use client';
 
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 
-import CategoryHeader from '@/components/CategoryHeader';
-import Posts from '@/components/Posts';
+import Posts from '@/components/AllPosts/Posts';
+import CategoryHeader from '@/components/Headers/CategoryHeader';
 import SearchBlock from '@/components/SearchBlock';
 import categories from '@/shared/categories.json';
 import posts from '@/shared/posts.json';
@@ -24,9 +24,12 @@ const Category: FC<CategoryPageProps> = ({ params: { lng, title } }) => {
   const arePostsByCloudTagExists = postsByCloudTag.length;
   const postsByCategoryAndCloudTag = chosenTag && !arePostsByCloudTagExists ? [] : postsByCategory;
 
-  const handleChooseTag = (tag: string) => () => {
-    setChosenTag(tag);
-  };
+  const handleChooseTag = useCallback(
+    (tag: string) => () => {
+      setChosenTag(tag);
+    },
+    []
+  );
 
   return (
     <div className={styles.wrapper}>

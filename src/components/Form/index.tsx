@@ -4,6 +4,7 @@ import React, { FC, useRef, useState } from 'react';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { useMyTranslation } from '@/app/i18n/client';
+import { envVariables } from '@/constants';
 import query from '@/shared/query.json';
 import { formSchema } from '@/utils/validationSchemas';
 import emailjs from '@emailjs/browser';
@@ -15,6 +16,7 @@ import styles from './styles.module.scss';
 
 const Form: FC = () => {
   const { t } = useMyTranslation();
+  const { emailJSServiceId, emailJSFormTemplate, emailJSPublicKey } = envVariables;
 
   const [alertText, setAlertText] = useState<string>('');
 
@@ -33,10 +35,10 @@ const Form: FC = () => {
   const handleSendMessage: SubmitHandler<FormInputProps> = () => {
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_FORM_TEMPLATE!,
+        emailJSServiceId,
+        emailJSFormTemplate,
         formRef.current as HTMLFormElement,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        emailJSPublicKey
       )
       .then(
         (result) => {

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import Category from '@/components/Category';
+import Category from '@/components/Categories/Category';
 import categories from '@/shared/categories.json';
 
 import { CategoriesProps } from './types';
@@ -12,11 +12,11 @@ const Categories: FC<CategoriesProps> = ({ categoriesTitle, titleAlign }) => (
     <h6 className={styles.title} style={{ textAlign: titleAlign }}>
       {categoriesTitle}
     </h6>
-    <div className={styles.content}>
+    <section className={styles.content}>
       {categories.map((category) => (
         <Category key={category.title} category={category} />
       ))}
-    </div>
+    </section>
   </div>
 );
 

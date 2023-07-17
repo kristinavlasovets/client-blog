@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { Icon, LatLngExpression } from 'leaflet';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 
-import { coordinates } from '@/constants/coordinates';
+import { coordinates } from '@/constants';
 
 import 'leaflet/dist/leaflet.css';
 import styles from './styles.module.scss';

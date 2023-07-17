@@ -1,4 +1,4 @@
-import Author from '@/components/Author';
+import Author from '@/components/Authors/Author';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Author> = {

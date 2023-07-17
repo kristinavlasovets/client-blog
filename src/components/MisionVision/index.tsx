@@ -13,7 +13,7 @@ const MisionVision: FC<MisionVisionProps> = ({ variant, lng }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.main}>
-        <div className={styles.item}>
+        <section className={styles.item}>
           {variant === 'vision' ? (
             <>
               <p className={styles.label}>{t('AboutUs.misionLabel')}</p>
@@ -30,8 +30,8 @@ const MisionVision: FC<MisionVisionProps> = ({ variant, lng }) => {
               </Link>
             </>
           )}
-        </div>
-        <div className={styles.item}>
+        </section>
+        <section className={styles.item}>
           {variant === 'vision' ? (
             <>
               <p className={styles.label}>{t('AboutUs.visionLabel')}</p>
@@ -45,7 +45,7 @@ const MisionVision: FC<MisionVisionProps> = ({ variant, lng }) => {
               <p className={styles.text}>{t('AboutUs.misionText')}</p>
             </>
           )}
-        </div>
+        </section>
       </div>
       {variant !== 'vision' && (
         <div className={styles.pattern}>

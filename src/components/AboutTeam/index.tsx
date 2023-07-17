@@ -27,11 +27,11 @@ const AboutTeam: FC<AboutTeamProps> = (props) => {
           }}
         />
       </div>
-      <div className={styles.content}>
+      <section className={styles.content}>
         <h3 className={styles.label}>{label}</h3>
         <h4 className={styles.title}>{title}</h4>
         <p className={styles.text}>{text}</p>
-      </div>
+      </section>
     </div>
   );
 };

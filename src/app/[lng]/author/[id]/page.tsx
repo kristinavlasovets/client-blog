@@ -1,23 +1,26 @@
-import React, { FC } from 'react';
+'use client';
 
-import { serverTranslation } from '@/app/i18n/client';
-import AuthorHeader from '@/components/AuthorHeader';
-import Posts from '@/components/Posts';
-import authors from '@/shared/authors.json';
+import React, { FC, useMemo } from 'react';
+
+import { useMyTranslation } from '@/app/i18n/client';
+import Posts from '@/components/AllPosts/Posts';
+import AuthorHeader from '@/components/Headers/AuthorHeader';
 import posts from '@/shared/posts.json';
+import { findAuthorById } from '@/utils/findAuthorById';
 
 import { AuthorPageProps } from './types';
 
 import styles from './styles.module.scss';
 
 const Author: FC<AuthorPageProps> = ({ params: { lng, id } }) => {
-  const { t } = serverTranslation(lng);
+  const { t } = useMyTranslation();
 
-  const { name, image, facebook, instagram, linkedin, twitter, review } = authors.find(
-    (author) => author.id === +id
-  )!;
+  const { name, image, review, linkedin, twitter, facebook, instagram } = useMemo(
+    () => findAuthorById(Number(id)),
+    [id]
+  );
 
-  const postsByAuthor = posts.filter(({ authorId }) => authorId === +id);
+  const postsByAuthor = posts.filter(({ authorId }) => authorId === Number(id));
 
   return (
     <div className={styles.wrapper}>

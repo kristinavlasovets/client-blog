@@ -3,9 +3,8 @@ import React, { FC } from 'react';
 import { serverTranslation } from '@/app/i18n/client';
 import tags from '@/shared/tags.json';
 
-import CategoriesList from '../CategoriesList';
-import TagsSearch from '../TagsSearch';
-
+import CategoriesList from './CategoriesList';
+import TagsSearch from './TagsSearch';
 import { SearchBlockProps } from './types';
 
 import styles from './styles.module.scss';

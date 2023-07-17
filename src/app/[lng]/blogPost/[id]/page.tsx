@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
-import BlogPostItem from '@/components/BlogPostItem';
+import BlogPostItem from '@/components/AllPosts/BlogPostItem';
+import RelatedBlogPosts from '@/components/AllPosts/RelatedBlogPosts';
 import JoinOurTeam from '@/components/JoinOurTeam';
-import RelatedBlogPosts from '@/components/RelatedBlogPosts';
 import posts from '@/shared/posts.json';
 
 import { BlogPostPageProps } from './types';
@@ -14,7 +14,7 @@ const BlogPost: FC<BlogPostPageProps> = ({ params: { lng, id } }) => {
 
   return (
     <div className={styles.wrapper}>
-      <BlogPostItem blogPost={currentBlogPost} lng={lng} />
+      <BlogPostItem blogPost={currentBlogPost} />
       <RelatedBlogPosts
         category={currentBlogPost.category}
         blogPostId={currentBlogPost.id}

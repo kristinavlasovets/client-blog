@@ -1,0 +1,100 @@
+.wrapper {
+  margin-bottom: $margin-xs;
+  width: $width-xxl;
+  background-color: $lavender-color;
+}
+
+.header {
+  @include flex-between-start();
+  position: relative;
+  margin: 0 auto;
+  width: $width-ml;
+  padding: $padding-xs 0 $padding-xs;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    width: $width-xxl;
+  }
+}
+
+.image {
+  position: relative;
+  width: $width-xs;
+  aspect-ratio: 3/4;
+
+  @media (max-width: $tablet) {
+    width: $width-xxs;
+    margin: 0 auto;
+    margin-bottom: $margin-xs;
+  }
+}
+
+.content {
+  margin-left: $margin-xs;
+  width: $width-ml;
+
+  @media (max-width: $tablet) {
+    width: $width-ll;
+    margin: 0 auto;
+  }
+}
+
+.title {
+  margin-bottom: $margin-xs;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64px;
+  color: $primary-color;
+
+  @media (max-width: $tablet) {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.text {
+  width: $width-ll;
+  margin-bottom: $margin-xs;
+  font-size: 16px;
+  color: $medium-gray-color;
+}
+
+.icons {
+  @include flex-between-center();
+  width: $width-xss;
+  cursor: pointer;
+
+  a {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 10px;
+  }
+}
+
+.pattern {
+  position: absolute;
+  width: $width-xxl;
+  height: 24px;
+  display: flex;
+  bottom: 0;
+}
+
+.left {
+  width: $width-ml;
+  background-color: $yellow-color;
+}
+
+.right {
+  width: $width-xs;
+  background-color: $purple-color;
+}

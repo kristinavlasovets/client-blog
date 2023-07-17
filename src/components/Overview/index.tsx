@@ -10,7 +10,7 @@ const Overview: FC<LanguageProps> = ({ lng }) => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.overview}>
+      <article className={styles.overview}>
         <div className={styles.item}>
           <h2 className={styles.count}>12+</h2>
           <p className={styles.text}>{t('AboutUs.blogsPublished')}</p>
@@ -23,7 +23,7 @@ const Overview: FC<LanguageProps> = ({ lng }) => {
           <h2 className={styles.count}>30K+</h2>
           <p className={styles.text}> {t('AboutUs.usersTotal')}</p>
         </div>
-      </div>
+      </article>
       <div className={styles.pattern}>
         <div className={styles.left} />
         <div className={styles.right} />

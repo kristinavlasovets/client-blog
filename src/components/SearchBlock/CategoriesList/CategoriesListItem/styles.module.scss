@@ -1,0 +1,50 @@
+.category {
+  margin-bottom: $margin-xs;
+  padding: $padding-xxs;
+  width: $width-xxl;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  border: 1px solid $gray-color;
+  transition: all 0.8s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $yellow-color;
+  }
+  @media (max-width: $tablet) {
+    height: 72px;
+  }
+}
+
+.selected {
+  background-color: $yellow-color;
+  border: none;
+}
+
+.image {
+  margin-right: $margin-xs;
+  position: relative;
+  background-color: $beige-color;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+
+  @media (max-width: $tablet) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: $primary-color;
+  line-height: 32px;
+  letter-spacing: -1px;
+
+  @media (max-width: $tablet) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

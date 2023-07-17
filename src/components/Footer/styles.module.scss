@@ -32,7 +32,7 @@
 }
 
 .links {
-  width: $width-l;
+  width: $width-m;
 
   @media (max-width: $laptop) {
     @include flex-column-center();
@@ -85,7 +85,5 @@
 
   @media (max-width: $mobile) {
     margin-top: $margin-xs;
-    width: $width-m;
-    max-width: $width-m;
   }
 }

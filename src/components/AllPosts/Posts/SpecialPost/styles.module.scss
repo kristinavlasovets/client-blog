@@ -1,0 +1,90 @@
+.wrapper {
+  @include enter-animation();
+  position: relative;
+  width: $width-ll;
+  margin: $margin-xs auto $margin-xs;
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+  }
+}
+
+.image {
+  position: relative;
+  width: $width-ml;
+  height: 700px;
+  background-position: 0 $width-xxl;
+  background: url('/assets/images/about-us-closeup.png');
+  background-size: cover;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.content {
+  position: absolute;
+  width: $width-l;
+  padding: $padding-xs;
+  top: $height-m;
+  right: 0;
+  background-color: $white-color;
+  height: calc(100% - $height-m);
+  color: $primary-color;
+
+  @media (max-width: $tablet) {
+    position: static;
+    top: $height-s;
+    height: calc(100% - $height-s);
+    width: $width-ml;
+  }
+}
+
+.label {
+  margin-bottom: $margin-xs;
+  font-size: 16px;
+  font-weight: 600;
+  color: $primary-color;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-bottom: $margin-xs;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -2px;
+
+  @media (max-width: $tablet) {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+.text {
+  margin-bottom: $margin-xs;
+  font-size: 16px;
+  line-height: 28px;
+  color: $medium-gray-color;
+}
+
+.button {
+  @include flex-center-center();
+  margin-top: $margin-xs;
+  width: 269px;
+  height: $height-s;
+  background: $yellow-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $primary-color;
+  transition: transform 250ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $dark-yellow-color;
+    transform: translateX(10px);
+  }
+}

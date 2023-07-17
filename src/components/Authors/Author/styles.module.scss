@@ -1,0 +1,81 @@
+.wrapper {
+  @include flex-column-center();
+  width: $width-xxl;
+  padding: $padding-s 0 $padding-s;
+  height: fit-content;
+  background-color: $gray-color;
+  transition: all 0.8s;
+
+  &:hover {
+    background-color: $beige-color;
+  }
+}
+
+.image {
+  margin-bottom: $margin-xs;
+  position: relative;
+  overflow: hidden;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: scale(1.8);
+  }
+
+  @media (max-width: $tablet) {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 700;
+  color: $primary-color;
+  line-height: 40px;
+  letter-spacing: -1px;
+  transition: all 0.8s;
+
+  &:hover {
+    color: $dark-yellow-color;
+    transform: scale(1.1);
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
+
+.post {
+  margin-bottom: $margin-xs;
+  font-size: 14px;
+  line-height: 20px;
+  color: $medium-gray-color;
+
+  @media (max-width: $tablet) {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+.socials {
+  @include flex-between-center();
+  width: $width-xxs;
+  cursor: pointer;
+
+  a {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  @media (max-width: $tablet) {
+    width: $width-ll;
+  }
+}

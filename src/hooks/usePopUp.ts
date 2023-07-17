@@ -2,9 +2,9 @@ import { Dispatch, RefObject, SetStateAction, useEffect, useRef, useState } from
 
 export const usePopUp = (
   state = false
-): [RefObject<HTMLElement>, boolean, Dispatch<SetStateAction<boolean>>] => {
+): [RefObject<HTMLFormElement>, boolean, Dispatch<SetStateAction<boolean>>] => {
   const [isVisible, setIsVisible] = useState(state);
-  const popUpRef = useRef<HTMLDivElement>(null);
+  const popUpRef = useRef<HTMLFormElement>(null);
 
   const handleOnClickOutside = (event: Event) => {
     if (popUpRef.current && !popUpRef.current.contains(event.target as Node)) {
@@ -17,10 +17,8 @@ export const usePopUp = (
 
   useEffect(() => {
     document.body.addEventListener('mousedown', handleOnClickOutside);
-    document.body.addEventListener('touchstart', handleOnClickOutside);
     return () => {
       document.body.removeEventListener('mousedown', handleOnClickOutside);
-      document.body.removeEventListener('touchstart', handleOnClickOutside);
     };
   }, []);
 

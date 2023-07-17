@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { dir } from 'i18next';
 
 import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import Header from '@/components/Headers/Header';
 
 import { languages } from '../i18n/settings';
 

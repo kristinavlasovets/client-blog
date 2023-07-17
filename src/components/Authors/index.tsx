@@ -3,8 +3,7 @@ import React, { FC } from 'react';
 import { serverTranslation } from '@/app/i18n/client';
 import authors from '@/shared/authors.json';
 
-import Author from '../Author';
-
+import Author from './Author';
 import { AuthorsProps } from './types';
 
 import styles from './styles.module.scss';

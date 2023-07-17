@@ -1,0 +1,144 @@
+.wrapper {
+  width: $width-xxl;
+  background-color: $blue-gray-color;
+  margin: $margin-xs 0 $margin-xs;
+  padding: $padding-xs 0 $padding-xs;
+}
+
+.form {
+  @include flex-between-center();
+  margin: 0 auto;
+  width: $width-xl;
+
+  @media (max-width: $laptop) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @media (max-width: $mobile) {
+    width: $width-xxl;
+  }
+}
+
+.title {
+  width: $width-s;
+  padding-left: $padding-xxs;
+  font-size: 34px;
+  font-weight: 700;
+  color: $white-color;
+
+  @media (max-width: $tablet) {
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  @media (max-width: $laptop) {
+    margin: $margin-xs 0 $margin-xs;
+    width: $width-ll;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.main {
+  display: flex;
+  width: $width-xl;
+  justify-content: space-evenly;
+
+  @media (max-width: $mobile) {
+    width: $width-xxl;
+    flex-direction: column;
+    height: 200px;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+  width: 323px;
+  min-width: 200px;
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+    width: 200px;
+    max-width: $width-xxl;
+  }
+
+  @media (max-width: $mobile) {
+    width: $width-xl;
+  }
+}
+
+.input {
+  width: $width-xxl;
+  height: $height-s;
+  background: transparent;
+  padding: 0 $padding-s 0 $padding-s;
+  font-size: 16px;
+  border: 1px solid $dark-gray-color;
+  color: $white-color;
+
+  &::placeholder {
+    color: $white-color;
+    opacity: 0.2;
+  }
+
+  &:focus {
+    border: 1px solid $yellow-color;
+  }
+}
+
+.button {
+  width: 180px;
+  height: $height-s;
+  background-color: $yellow-color;
+  font-size: 18px;
+  font-weight: 700;
+  color: $primary-color;
+  border: none;
+  cursor: pointer;
+  transition: transform 250ms;
+
+  &:hover {
+    opacity: 0.8;
+    transform: translateX(-10px);
+  }
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+    width: 200px;
+    max-width: $width-xxl;
+  }
+}
+
+.alert {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: $purple-color;
+  color: $beige-color;
+  font-size: 16px;
+  border-radius: 10px;
+  opacity: 0.8;
+  border: none;
+  cursor: pointer;
+
+  z-index: 1000;
+}
+
+.errorMessage {
+  margin-top: $margin-xs;
+  color: $white-color;
+
+  p {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $yellow-color;
+    }
+  }
+}

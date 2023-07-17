@@ -1,6 +1,6 @@
 .wrapper {
   margin-bottom: $margin-xs;
-  width: $width-xs;
+  width: 298px;
 
   @media (max-width: $tablet) {
     width: $width-xxl;
@@ -17,13 +17,9 @@
 }
 
 .tagWrapper {
-  width: $width-ml;
+  width: $width-xxl;
   display: flex;
   flex-wrap: wrap;
-
-  @media (max-width: $tablet) {
-    width: $width-xxl;
-  }
 }
 
 .tag {

@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
 import { serverTranslation } from '@/app/i18n/client';
-import AboutHeader from '@/components/AboutHeader';
 import AboutTeam from '@/components/AboutTeam';
 import Authors from '@/components/Authors';
+import AboutHeader from '@/components/Headers/AboutHeader';
 import JoinOurTeam from '@/components/JoinOurTeam';
 import MisionVision from '@/components/MisionVision';
 import Overview from '@/components/Overview';
