@@ -7,6 +7,7 @@ import styles from './styles.module.scss';
 
 const PrivacyPolicy: FC<PageProps> = ({ params: { lng } }) => {
   const { t } = serverTranslation(lng);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
