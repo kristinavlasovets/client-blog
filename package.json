@@ -10,6 +10,7 @@
     "eslint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "test": "jest",
+    "test:cy": "cypress open",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -20,17 +21,26 @@
     "^@/(.*)$": "<rootDir>/src/$1"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@hookform/resolvers": "^3.1.1",
     "accept-language": "^3.0.18",
+    "cypress": "^12.17.0",
+    "emailjs": "^4.0.2",
     "i18next": "^23.2.3",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-resources-to-backend": "^1.1.4",
+    "leaflet": "^1.9.4",
     "next": "13.4.7",
     "next-i18next": "^14.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-i18next": "^13.0.1"
+    "react-hook-form": "^7.45.1",
+    "react-i18next": "^13.0.1",
+    "react-leaflet": "^4.2.1",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.8",
     "@babel/plugin-transform-runtime": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
@@ -44,18 +54,22 @@
     "@storybook/nextjs": "^7.0.24",
     "@storybook/react": "^7.0.24",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "@svgr/webpack": "^8.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.60.1",
-    "@typescript-eslint/parser": "^5.60.1",
+    "@types/leaflet": "^1.9.3",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
+    "@types/testing-library__jest-dom": "^5.14.8",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
     "babel-jest": "^29.5.0",
+    "dotenv": "^16.3.1",
     "eslint": "8.43.0",
-    "eslint-config-next": "13.4.7",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "13.4.7",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
@@ -74,6 +88,7 @@
     "prettier": "^2.8.8",
     "sass": "^1.63.6",
     "storybook": "^7.0.24",
-    "typescript": "5.1.5"
+    "typescript": "5.1.5",
+    "url-loader": "^4.1.1"
   }
 }

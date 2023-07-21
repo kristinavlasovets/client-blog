@@ -1,0 +1,42 @@
+.wrapper {
+  margin-bottom: $margin-xs;
+  width: 298px;
+
+  @media (max-width: $tablet) {
+    width: $width-xxl;
+  }
+}
+
+.title {
+  margin-bottom: $margin-xs;
+  font-size: 32px;
+  color: $primary-color;
+  font-weight: $fontWeight-m;
+  line-height: 42px;
+  letter-spacing: -2px;
+}
+
+.tagWrapper {
+  width: $width-xxl;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  @include flex-center-center();
+  margin-bottom: $margin-xxxs;
+  margin-left: $margin-xxxs;
+  padding: $padding-xs;
+  height: 32px;
+  width: fit-content;
+  border: 2px solid $medium-gray-color;
+  border-radius: 32px;
+  color: $medium-gray-color;
+  font-size: $fontSize-xxxs;
+  font-weight: $fontWeight-m;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid $dark-yellow-color;
+  }
+}

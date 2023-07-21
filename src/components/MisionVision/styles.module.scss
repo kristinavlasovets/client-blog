@@ -1,0 +1,96 @@
+.wrapper {
+  @include enter-animation();
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: $padding-xs;
+  background-color: $lavender-color;
+}
+
+.main {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    font-size: $fontSize-xs;
+    font-weight: $fontWeight-m;
+    line-height: 32px;
+    color: $purple-color;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $dark-yellow-color;
+      transform: translateY(5px);
+    }
+  }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
+.item {
+  padding-top: $padding-s;
+  width: $width-s;
+  color: $primary-color;
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+  }
+}
+
+.label {
+  margin-bottom: $margin-xs;
+  font-size: $fontSize-xxs;
+  font-weight: $fontWeight-s;
+  text-transform: uppercase;
+  line-height: 20px;
+  letter-spacing: 3px;
+}
+
+.title {
+  margin-bottom: $margin-xs;
+  font-size: $fontSize-sm;
+  font-weight: $fontWeight-m;
+  line-height: 40px;
+  letter-spacing: -1px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $purple-color;
+    transform: translateY(5px);
+  }
+
+  @media (max-width: $tablet) {
+    font-size: $fontSize-xs;
+    line-height: 20px;
+  }
+}
+
+.text {
+  margin-bottom: $margin-xs;
+  font-size: $fontSize-xxs;
+  color: $dark-gray-color;
+  line-height: 28px;
+}
+
+.pattern {
+  width: $width-ml;
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: -5%;
+  height: 24px;
+}
+
+.left {
+  width: $width-ml;
+  background-color: $yellow-color;
+}
+
+.right {
+  width: $width-xs;
+  background-color: $purple-color;
+}
