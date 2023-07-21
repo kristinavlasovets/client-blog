@@ -35,7 +35,7 @@
   @keyframes slidein {
     from {
       width: 150%;
-      opacity: 0;
+      opacity: $opacity-xs;
       transition: opacity 0.4s;
       transition-delay: 0.4s;
     }
@@ -43,7 +43,7 @@
     to {
       width: $width-ll;
       margin: 0 auto;
-      opacity: 1;
+      opacity: $opacity-l;
       transition: opacity 0.1s;
       transition-delay: 0s;
     }

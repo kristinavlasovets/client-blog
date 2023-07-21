@@ -2,6 +2,11 @@
   @include flex-between-center();
   margin-top: $margin-xs;
   width: $width-xxl;
+
+  @media (max-width: $tablet) {
+    margin: $margin-xxxs auto;
+    text-align: center;
+  }
 }
 
 .image {
@@ -35,37 +40,37 @@
 
 .label {
   margin-bottom: $margin-xs;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   line-height: 48px;
   letter-spacing: -2px;
 
   @media (max-width: $tablet) {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: $fontSize-ss;
+    font-weight: $fontWeight-s;
     line-height: 32px;
   }
 }
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: $fontSize-ss;
+  font-weight: $fontWeight-m;
   line-height: 32px;
 
   @media (max-width: $tablet) {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: $fontSize-xs;
+    font-weight: $fontWeight-s;
     line-height: 22px;
   }
 }
 
 .text {
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   line-height: 28px;
 
   @media (max-width: $tablet) {
-    font-size: 12px;
+    font-size: $fontSize-xxxxs;
     line-height: 14px;
   }
 }

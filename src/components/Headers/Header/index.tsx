@@ -14,6 +14,7 @@ import styles from './styles.module.scss';
 
 const Header: FC<HeaderProps> = ({ lng }) => {
   const currentPath = usePathname();
+
   const translationPath = useMemo(() => currentPath.slice(4, currentPath.length), [currentPath]);
 
   return (

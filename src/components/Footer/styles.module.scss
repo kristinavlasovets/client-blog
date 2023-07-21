@@ -1,7 +1,7 @@
 .footer {
   width: $width-xxl;
   min-height: 500px;
-  padding: $padding-xxs 0 $padding-xxs;
+  padding: $padding-xs 0 $padding-xs;
   background-color: $primary-color;
 
   @media (max-width: $tablet) {
@@ -11,7 +11,6 @@
 
 .wrapper {
   margin: 0 auto;
-  width: $width-ll;
   height: 90%;
 }
 
@@ -21,12 +20,12 @@
 }
 
 .title {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: $fontSize-ss;
+  font-weight: $fontWeight-m;
   color: $white-color;
 
   @media (max-width: $tablet) {
-    font-size: 18px;
+    font-size: $fontSize-xs;
     line-height: 22px;
   }
 }
@@ -60,11 +59,11 @@
 }
 
 .info {
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   line-height: 28px;
 
   @media (max-width: $tablet) {
-    font-size: 12px;
+    font-size: $fontSize-xxxxs;
     line-height: 16px;
   }
 }

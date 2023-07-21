@@ -1,6 +1,11 @@
 .wrapper {
   width: $width-xxl;
   color: $primary-color;
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .header {
@@ -15,42 +20,49 @@
 }
 
 .title {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: $fontSize-l;
+  font-weight: $fontWeight-m;
+
+  @media (max-width: $tablet) {
+    font-size: $fontSize-s;
+    font-weight: $fontWeight-s;
+  }
 }
 
 .lastUpdate {
-  margin-top: 20px;
-  font-size: 16px;
-  opacity: 0.6;
+  margin-top: $margin-xxxs;
+  font-size: $fontSize-xxs;
+  opacity: $opacity-s;
 }
 
 .content {
-  width: $width-xxl;
   padding: $padding-s 0 $padding-s;
 }
 
 .article {
-  width: $width-ll;
   max-width: 768px;
   margin: 0 auto;
+
+  @media (max-width: $tablet) {
+    padding: $padding-s;
+  }
 }
 
 .articleTitle {
-  margin-bottom: 36px;
-  font-weight: 700;
-  font-size: 36px;
+  margin-bottom: $margin-xs;
+  font-weight: $fontWeight-m;
+  font-size: $fontSize-m;
 }
 
 .articleSubtitle {
-  margin-bottom: 36px;
-  font-weight: 700;
-  font-size: 32px;
+  margin-bottom: $margin-xs;
+  font-weight: $fontWeight-m;
+  font-size: $fontSize-sm;
 }
 
 .articleText {
-  margin-bottom: 36px;
-  font-size: 16px;
+  margin-bottom: $margin-xs;
+  font-size: $fontSize-xxs;
   line-height: 28px;
   text-align: justify;
 }

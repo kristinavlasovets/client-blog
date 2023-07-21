@@ -2,19 +2,19 @@
   position: fixed;
   width: $width-xxl;
   height: $height-xxl;
-  opacity: 0;
+  opacity: $opacity-xs;
   left: 0%;
   bottom: 0%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: $translusent-color;
   backdrop-filter: blur(4px);
-  z-index: 2000;
+  z-index: $zIndex-xl;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.1s ease-in-out;
 }
 
 .overlayVisible {
   visibility: visible;
-  opacity: 1;
+  opacity: $opacity-l;
 
   .drawer {
     transform: translateX(0%);
@@ -25,11 +25,11 @@
   position: absolute;
   height: $height-xxl;
   width: $width-xxs;
-  padding: $padding-xs;
+  padding: $padding-xxs;
   top: 0%;
   right: 0%;
   background-color: $primary-color;
-  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: -10px 4px 24px $translusent-color;
 
   display: flex;
   flex-direction: column;
@@ -37,20 +37,20 @@
   transition: transform 0.2s ease-in-out;
 
   a {
-    padding: $padding-xs;
+    padding: $padding-xxs;
   }
 }
 
 .button {
-  width: $width-ll;
+  width: $width-xxs;
   height: 32px;
   background: $yellow-color;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: $fontSize-xs;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   transition: transform 250ms;
   cursor: pointer;

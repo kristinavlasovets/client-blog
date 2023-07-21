@@ -1,7 +1,7 @@
 .category {
   width: 296px;
   border: 1px solid $gray-color;
-  padding: $padding-s;
+  padding: $padding-xs;
   transition: all 0.8s;
   cursor: pointer;
 
@@ -10,7 +10,9 @@
   }
 
   @media (max-width: $tablet) {
-    width: $width-ll;
+    margin: $margin-xxxs auto;
+    padding: 20px;
+    text-align: center;
   }
 }
 
@@ -21,19 +23,23 @@
   height: 48px;
   background-color: $beige-color;
   border-radius: 10px;
+
+  @media (max-width: $tablet) {
+    margin: $margin-xxxs auto;
+  }
 }
 
 .title {
   margin-bottom: $margin-xs;
-  font-weight: 700;
-  font-size: 28px;
+  font-weight: $fontWeight-m;
+  font-size: $fontSize-sm;
   line-height: 40px;
   letter-spacing: -1px;
   color: $primary-color;
 }
 
 .info {
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   line-height: 28px;
   color: $medium-gray-color;
 }

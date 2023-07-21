@@ -1,23 +1,21 @@
 .wrapper {
   @include flex-between-center();
-  margin: $margin-xs auto;
-  width: $width-ll;
+  margin: $margin-s auto;
   color: $medium-gray-color;
 
   @media (max-width: $tablet) {
     @include flex-column-center();
-    width: $width-xxl;
   }
 }
 
 .label {
-  font-size: 14px;
+  font-size: $fontSize-xxxs;
   line-height: 20px;
 }
 
 .title {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: $fontSize-ss;
+  font-weight: $fontWeight-m;
   line-height: 32px;
 
   @media (max-width: $tablet) {

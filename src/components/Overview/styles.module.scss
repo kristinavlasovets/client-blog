@@ -17,7 +17,7 @@
   background-color: $yellow-color;
 
   @media (max-width: $tablet) {
-    width: $width-ll;
+    width: fit-content;
   }
 }
 
@@ -29,24 +29,24 @@
 }
 
 .count {
-  font-size: 56px;
-  font-weight: 700;
+  font-size: $fontSize-ll;
+  font-weight: $fontWeight-m;
   line-height: 64px;
 
   @media (max-width: $tablet) {
-    font-size: 36px;
+    font-size: $fontSize-m;
     line-height: 48px;
   }
 }
 
 .text {
   margin-top: $margin-xxxs;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   line-height: 28px;
 
   @media (max-width: $tablet) {
     text-align: center;
-    font-size: 12px;
+    font-size: $fontSize-xxxxs;
     line-height: 12px;
   }
 }

@@ -1,22 +1,22 @@
 .wrapper {
-  width: $width-ll;
   margin: 0 auto;
-  margin-bottom: $margin-xs;
+  margin-bottom: $margin-s;
   padding: $padding-xs 0 $padding-xs;
   background-color: $beige-color;
 
   @media (max-width: $tablet) {
-    width: $width-xxl;
     padding: $padding-xs;
   }
 }
 
 .content {
   @include flex-between-center();
-  width: $width-ll;
+  width: fit-content;
   margin: 0 auto;
 
   @media (max-width: $tablet) {
+    margin: 0 auto;
+    text-align: center;
     flex-direction: column;
   }
 }
@@ -33,37 +33,37 @@
 
 .label {
   margin-bottom: $margin-xs;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: $fontSize-xxs;
+  font-weight: $fontWeight-s;
   text-transform: uppercase;
   line-height: 20px;
   letter-spacing: 3px;
 
   @media (max-width: $tablet) {
-    font-size: 14px;
+    font-size: $fontSize-xxxs;
     line-height: 16px;
   }
 }
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   line-height: 48px;
   letter-spacing: -2px;
 
   @media (max-width: $tablet) {
-    font-size: 24px;
+    font-size: $fontSize-ss;
     line-height: 26px;
   }
 }
 
 .text {
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   line-height: 28px;
 
   @media (max-width: $tablet) {
-    font-size: 14px;
+    font-size: $fontSize-xxxs;
     line-height: 16px;
   }
 }

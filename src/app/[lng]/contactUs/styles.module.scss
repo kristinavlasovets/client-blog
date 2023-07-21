@@ -1,9 +1,9 @@
 .wrapper {
-  width: $width-l;
-  margin: $margin-xs auto $margin-xs;
+  width: 968px;
+  margin: $margin-s auto $margin-xs;
 
   @media (max-width: $tablet) {
-    width: $width-ll;
+    width: fit-content;
   }
 }
 
@@ -19,22 +19,22 @@
 .title {
   margin-bottom: $margin-xs;
   text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 900;
+  font-size: $fontSize-xxs;
+  font-weight: $fontWeight-l;
   letter-spacing: 3px;
 }
 
 .subtitle {
   margin-bottom: $margin-xs;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: $fontSize-l;
+  font-weight: $fontWeight-m;
   line-height: 64px;
   letter-spacing: -2px;
   text-align: center;
 }
 
 .text {
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   line-height: 28px;
   color: $medium-gray-color;
   text-align: center;
@@ -48,7 +48,6 @@
 }
 
 .infoWrapper {
-  width: $width-ll;
   display: flex;
   justify-content: center;
 
@@ -60,19 +59,19 @@
 
 .chapter {
   width: $width-m;
-  padding-left: $padding-xxs;
+  padding-left: $padding-s;
 
   @media (max-width: $tablet) {
-    width: $width-ll;
+    width: fit-content;
   }
 }
 
 .chapterTitle {
   margin-bottom: $margin-xs;
   padding-bottom: $padding-s;
-  font-size: 14px;
+  font-size: $fontSize-xxxs;
   color: $gray-color;
-  opacity: 0.6;
+  opacity: $opacity-s;
   width: 90%;
 
   border-bottom: 1px solid $gray-color;
@@ -81,14 +80,14 @@
 .chapterText {
   padding-bottom: $padding-xxs;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: $fontWeight-s;
   line-height: 32px;
   color: $white-color;
 }
 
 .chapterNote {
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   color: $gray-color;
-  opacity: 0.6;
+  opacity: $opacity-s;
   line-height: 28px;
 }

@@ -37,14 +37,14 @@
 }
 
 .title {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: $fontSize-ss;
+  font-weight: $fontWeight-s;
   color: $primary-color;
   line-height: 32px;
   letter-spacing: -1px;
 
   @media (max-width: $tablet) {
-    font-size: 22px;
+    font-size: $fontSize-s;
     line-height: 26px;
   }
 }

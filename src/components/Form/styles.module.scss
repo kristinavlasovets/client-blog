@@ -29,7 +29,7 @@
   height: $height-ss;
   background: transparent;
   padding: $padding-xxs;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   border: 1px solid $dark-gray-color;
   color: $dark-gray-color;
 
@@ -47,7 +47,7 @@
   height: $height-m;
   background: transparent;
   padding: $padding-xxs;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   border: 1px solid $dark-gray-color;
   color: $dark-gray-color;
 
@@ -66,7 +66,7 @@
   width: $width-xxl;
   background: transparent;
   padding: $padding-xxs;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   border: 1px solid $dark-gray-color;
   color: $dark-gray-color;
 
@@ -79,8 +79,8 @@
   width: $width-xxl;
   height: $height-s;
   background-color: $yellow-color;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: $fontSize-xs;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   border: none;
   cursor: pointer;
@@ -103,13 +103,13 @@
   padding: 20px;
   background-color: $purple-color;
   color: $beige-color;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   border-radius: 10px;
-  opacity: 0.8;
+  opacity: $opacity-m;
   border: none;
   cursor: pointer;
 
-  z-index: 1000;
+  z-index: $zIndex-l;
 }
 
 .errorMessage {

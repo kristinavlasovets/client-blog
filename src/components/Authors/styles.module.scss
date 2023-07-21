@@ -1,20 +1,19 @@
 .wrapper {
   @include enter-animation();
-  width: $width-xxl;
-  margin: $margin-xs auto $margin-xs;
+  margin: $margin-s auto $margin-s;
 }
 
 .title {
   margin-bottom: $margin-xs;
   text-align: center;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   line-height: 48px;
   letter-spacing: -2px;
 
   @media (max-width: $tablet) {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: $fontSize-s;
+    font-weight: $fontWeight-s;
     line-height: 24px;
   }
 }

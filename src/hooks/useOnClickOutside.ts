@@ -5,9 +5,7 @@ interface UseOnClickOutsideProps {
   handler: (e: Event) => void;
 }
 
-export const useOnClickOutside = (props: UseOnClickOutsideProps) => {
-  const { handler, ref } = props;
-
+export const useOnClickOutside = ({ handler, ref }: UseOnClickOutsideProps) => {
   useEffect(() => {
     const listener = (event: Event) => {
       const element = ref?.current;

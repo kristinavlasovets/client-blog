@@ -5,7 +5,9 @@
   margin: $margin-xs auto $margin-xs;
 
   @media (max-width: $tablet) {
-    margin: 0 auto;
+    margin: $margin-xxxs auto;
+    width: fit-content;
+    text-align: center;
   }
 }
 
@@ -36,14 +38,14 @@
     position: static;
     top: $height-s;
     height: calc(100% - $height-s);
-    width: $width-ml;
+    width: fit-content;
   }
 }
 
 .label {
   margin-bottom: $margin-xs;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: $fontSize-xxs;
+  font-weight: $fontWeight-s;
   color: $primary-color;
   line-height: 20px;
   letter-spacing: 3px;
@@ -52,20 +54,20 @@
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: $fontSize-l;
+  font-weight: $fontWeight-m;
   line-height: 64px;
   letter-spacing: -2px;
 
   @media (max-width: $tablet) {
-    font-size: 22px;
+    font-size: $fontSize-s;
     line-height: 24px;
   }
 }
 
 .text {
   margin-bottom: $margin-xs;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   line-height: 28px;
   color: $medium-gray-color;
 }
@@ -76,8 +78,8 @@
   width: 269px;
   height: $height-s;
   background: $yellow-color;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: $fontSize-xs;
+  font-weight: $fontWeight-m;
   line-height: 24px;
   color: $primary-color;
   transition: transform 250ms;
@@ -86,5 +88,9 @@
   &:hover {
     background-color: $dark-yellow-color;
     transform: translateX(10px);
+  }
+
+  @media (max-width: $tablet) {
+    margin: $margin-xxxs auto;
   }
 }

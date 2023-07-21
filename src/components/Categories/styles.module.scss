@@ -1,24 +1,27 @@
 .wrapper {
   margin: $margin-xs auto $margin-xs;
-  width: $width-ll;
 }
 
 .title {
   margin-bottom: $margin-xs;
-  width: $width-xxl;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   line-height: 48px;
   letter-spacing: -2px;
   color: $primary-color;
+
+  @media (max-width: $tablet) {
+    font-size: $fontSize-s;
+    font-weight: $fontWeight-s;
+  }
 }
 
 .content {
-  width: $width-xxl;
   display: flex;
   justify-content: space-between;
 
   @media (max-width: $tablet) {
     flex-direction: column;
+    justify-content: center;
   }
 }

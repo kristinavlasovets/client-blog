@@ -8,6 +8,7 @@ import Authors from '@/components/Authors';
 import Categories from '@/components/Categories';
 import HomeHeader from '@/components/Headers/HomeHeader';
 import JoinOurTeam from '@/components/JoinOurTeam';
+import Layout from '@/components/Layout';
 import MisionVision from '@/components/MisionVision';
 import PartnersList from '@/components/PartnersList';
 import Testimonials from '@/components/Testimonials';
@@ -23,14 +24,28 @@ const Home: FC<PageProps> = ({ params: { lng } }) => {
 
   const components = [
     <HomeHeader />,
-    <FeaturedBlogPosts lng={lng} />,
-    <MisionVision lng={lng} variant="" />,
-    <Categories categoriesTitle={t('Home.categoriesTitle')} titleAlign="center" />,
+    <Layout>
+      <FeaturedBlogPosts lng={lng} />
+    </Layout>,
+    <Layout>
+      <MisionVision lng={lng} variant="" />
+    </Layout>,
+    <Layout>
+      <Categories categoriesTitle={t('Home.categoriesTitle')} titleAlign="center" />
+    </Layout>,
     <SpecialPost lng={lng} />,
-    <Authors lng={lng} variant="home" />,
-    <PartnersList lng={lng} />,
-    <Testimonials lng={lng} />,
-    <JoinOurTeam lng={lng} />,
+    <Layout>
+      <Authors lng={lng} variant="home" />
+    </Layout>,
+    <Layout>
+      <PartnersList lng={lng} />
+    </Layout>,
+    <Layout>
+      <Testimonials lng={lng} />
+    </Layout>,
+    <Layout>
+      <JoinOurTeam lng={lng} />
+    </Layout>,
   ];
 
   const displayedComponents = useInfinityScroll(components);

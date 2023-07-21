@@ -19,13 +19,13 @@
 
 .review {
   margin-bottom: $margin-xs;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: $fontSize-ss;
+  font-weight: $fontWeight-m;
   line-height: 32px;
 
   @media (max-width: $tablet) {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: $fontSize-xs;
+    font-weight: $fontWeight-xs;
     line-height: 22px;
   }
 }
@@ -46,13 +46,13 @@
 }
 
 .name {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: $fontSize-ss;
+  font-weight: $fontWeight-m;
   line-height: 32px;
 }
 
 .from {
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   color: $medium-gray-color;
   line-height: 28px;
 }
@@ -92,6 +92,6 @@
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    opacity: 0.5;
+    opacity: $opacity-s;
   }
 }

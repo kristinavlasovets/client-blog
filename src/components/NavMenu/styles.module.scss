@@ -46,9 +46,9 @@
   width: 228px;
   height: 56px;
   background-color: $white-color;
-  margin-left: 32px;
-  font-size: 18px;
-  font-weight: 700;
+  margin-left: $margin-xxxs;
+  font-size: $fontSize-xs;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   border: none;
   cursor: pointer;
@@ -64,7 +64,7 @@
     margin-bottom: $margin-xs;
     width: $width-xxs;
     height: 30px;
-    font-size: 14px;
+    font-size: $fontSize-xxxs;
   }
 }
 
@@ -75,10 +75,10 @@
   height: $height-xxl;
   left: 0%;
   bottom: 0%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: $translusent-color;
   backdrop-filter: blur(4px);
-  z-index: 2000;
-  opacity: 1;
+  z-index: $zIndex-xl;
+  opacity: $opacity-l;
 }
 
 .video {

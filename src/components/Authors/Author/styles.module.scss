@@ -1,7 +1,7 @@
 .wrapper {
   @include flex-column-center();
   width: $width-xxl;
-  padding: $padding-s 0 $padding-s;
+  padding: $padding-xs 0 $padding-xs;
   height: fit-content;
   background-color: $gray-color;
   transition: all 0.8s;
@@ -31,8 +31,8 @@
 }
 
 .name {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: $fontSize-sm;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   line-height: 40px;
   letter-spacing: -1px;
@@ -44,20 +44,20 @@
   }
 
   @media (max-width: $tablet) {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: $fontSize-xs;
+    font-weight: $fontWeight-s;
     line-height: 24px;
   }
 }
 
 .post {
   margin-bottom: $margin-xs;
-  font-size: 14px;
+  font-size: $fontSize-xxxs;
   line-height: 20px;
   color: $medium-gray-color;
 
   @media (max-width: $tablet) {
-    font-size: 10px;
+    font-size: $fontSize-xxxxs;
     line-height: 14px;
   }
 }
@@ -76,6 +76,6 @@
   }
 
   @media (max-width: $tablet) {
-    width: $width-ll;
+    width: fit-content;
   }
 }

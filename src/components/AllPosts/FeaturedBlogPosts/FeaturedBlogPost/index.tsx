@@ -10,10 +10,11 @@ import { findAuthorById } from '@/utils/findAuthorById';
 
 import styles from './styles.module.scss';
 
+const { title, authorId, createdAt, id, image, preview } = posts[0];
+
 const FeaturedBlogPost: FC = () => {
   const { t } = useMyTranslation();
 
-  const { title, authorId, createdAt, id, image, preview } = posts[0];
   const { name } = useMemo(() => findAuthorById(Number(id)), [id]);
 
   return (

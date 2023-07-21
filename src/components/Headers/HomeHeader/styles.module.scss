@@ -7,14 +7,20 @@
 }
 
 .header {
-  width: $width-ll;
   margin: 0 auto;
+  padding-left: $padding-s;
+
+  @media (max-width: $tablet) {
+    padding-left: 0;
+    width: fit-content;
+    text-align: center;
+  }
 }
 
 .label {
   margin-bottom: $margin-xxxs;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: $fontSize-xxs;
+  font-weight: $fontWeight-xs;
   line-height: 20px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -22,7 +28,7 @@
   a {
     margin-left: 5px;
     color: $white-color;
-    font-weight: 900;
+    font-weight: $fontWeight-l;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 
@@ -33,7 +39,7 @@
 
   @media (max-width: $tablet) {
     margin-bottom: $margin-xs;
-    font-size: 12px;
+    font-size: $fontSize-xxxxs;
     line-height: 14px;
   }
 }
@@ -42,8 +48,8 @@
   margin-bottom: $margin-xxxs;
   display: block;
   width: $width-ml;
-  font-size: 56px;
-  font-weight: 700;
+  font-size: $fontSize-ll;
+  font-weight: $fontWeight-m;
   line-height: 64px;
   letter-spacing: -2px;
   color: $white-color;
@@ -55,31 +61,31 @@
   }
 
   @media (max-width: $tablet) {
-    font-size: 36px;
-    font-weight: 600;
+    font-size: $fontSize-m;
+    font-weight: $fontWeight-s;
     line-height: 44px;
-    width: $width-ll;
+    width: fit-content;
   }
 }
 
 .preview {
   margin-bottom: $margin-xxxs;
   width: $width-l;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   line-height: 28px;
 
   @media (max-width: $tablet) {
     margin-bottom: $margin-xs;
-    font-size: 12px;
+    font-size: $fontSize-xxxxs;
     line-height: 14px;
-    width: $width-ll;
+    width: fit-content;
   }
 }
 
 .info {
   margin-bottom: $margin-xxxs;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: $fontSize-xxxs;
+  font-weight: $fontWeight-xs;
   color: $white-color;
 
   a {
@@ -97,8 +103,8 @@
   width: 204px;
   height: 56px;
   background: $yellow-color;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: $fontSize-xs;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   line-height: 24px;
   transition: transform 250ms;
@@ -107,5 +113,9 @@
   &:hover {
     background-color: $dark-yellow-color;
     transform: translateX(10px);
+  }
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
   }
 }

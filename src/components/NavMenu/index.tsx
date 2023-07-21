@@ -8,7 +8,7 @@ import { useMyTranslation } from '@/app/i18n/client';
 import { icons } from '@/constants/icons';
 import { footerNavMenu, headerNavMenu } from '@/constants/navMenu';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
-import { usePortal } from '@/hooks/usePortal';
+import { checkIsPathActive } from '@/utils/checkIsPathActive';
 
 import Drawer from './Drawer';
 import Portal from './Portal';
@@ -19,13 +19,16 @@ import styles from './styles.module.scss';
 const NavMenu: FC<NavMenuProps> = ({ variant }) => {
   const { t, locale } = useMyTranslation();
 
-  const { isPortalOpen, setIsPortalOpen, handleTogglePortal } = usePortal();
   const ref = useRef<HTMLDivElement>(null);
 
   const pathName = usePathname();
-  const headerVariant = variant === 'header';
 
   const [isOpenDrawer, setIsOpenDrawer] = useState<boolean>(false);
+  const [isPortalOpen, setIsPortalOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsPortalOpen(isPortalOpen);
+  }, [isPortalOpen]);
 
   const handleToggleDrawer = () => {
     setIsOpenDrawer((prevState) => !prevState);
@@ -35,19 +38,20 @@ const NavMenu: FC<NavMenuProps> = ({ variant }) => {
     setIsOpenDrawer(false);
   };
 
-  useEffect(() => {
-    setIsPortalOpen(isPortalOpen);
-  }, [isPortalOpen]);
+  const handleTogglePortal = () => {
+    setIsPortalOpen((prevState) => !prevState);
+  };
 
   useOnClickOutside({ handler: handleTogglePortal, ref });
 
+  const headerVariant = variant === 'header';
   const navigationMenu = headerVariant ? headerNavMenu : footerNavMenu;
 
   return (
     <>
       <nav className={styles.navMenu}>
         {navigationMenu.map(({ name, path }) => {
-          const isActive = pathName.replace(/ru(\/)?|en(\/)?/, '') === path;
+          const isActive = checkIsPathActive(pathName, path);
           return (
             <Link key={name} href={`/${locale}${path}`} className={isActive ? styles.active : ''}>
               {t(name)}
@@ -59,7 +63,7 @@ const NavMenu: FC<NavMenuProps> = ({ variant }) => {
         <>
           <Drawer onClose={handleCloseDrawer} isOpen={isOpenDrawer}>
             {navigationMenu.map(({ name, path }) => {
-              const isActive = pathName.replace(/ru(\/)?|en(\/)?/, '') === path;
+              const isActive = checkIsPathActive(pathName, path);
               return (
                 <Link
                   key={name}

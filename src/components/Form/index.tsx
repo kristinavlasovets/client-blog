@@ -15,12 +15,13 @@ import { FormInputProps } from './types';
 import styles from './styles.module.scss';
 
 const Form: FC = () => {
-  const { t } = useMyTranslation();
-  const { emailJSServiceId, emailJSFormTemplate, emailJSPublicKey } = envVariables;
-
   const [alertText, setAlertText] = useState<string>('');
 
   const formRef = useRef<HTMLFormElement>(null);
+
+  const { t } = useMyTranslation();
+
+  const { emailJSServiceId, emailJSFormTemplate, emailJSPublicKey } = envVariables;
 
   const {
     register,

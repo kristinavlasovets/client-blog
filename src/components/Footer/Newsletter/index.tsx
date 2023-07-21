@@ -14,12 +14,13 @@ import { NewsletterInputProps } from './types';
 import styles from './styles.module.scss';
 
 const Newsletter: FC = () => {
-  const { t } = useMyTranslation();
-  const { emailJSServiceId, emailJSNewsletterTemplate, emailJSPublicKey } = envVariables;
-
   const [alertText, setAlertText] = useState<string>('');
 
   const formRef = useRef<HTMLFormElement>(null);
+
+  const { t } = useMyTranslation();
+
+  const { emailJSServiceId, emailJSNewsletterTemplate, emailJSPublicKey } = envVariables;
 
   const {
     register,

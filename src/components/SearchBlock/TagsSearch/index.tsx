@@ -17,13 +17,13 @@ const TagsSearch: FC<TagsSearchProps> = ({ handleChooseTag }) => {
 
   const { t } = useMyTranslation();
 
-  const searchQuery = (start: string, pattern: string) => {
-    if (start.length > pattern.length) {
+  const searchQuery = (enteredValue: string, patternValue: string) => {
+    if (enteredValue.length > patternValue.length) {
       return false;
     }
 
-    const startQuery = pattern.slice(0, start.length);
-    return startQuery.toLocaleLowerCase() === start.toLocaleLowerCase();
+    const startQuery = patternValue.slice(0, enteredValue.length);
+    return startQuery.toLocaleLowerCase() === enteredValue.toLocaleLowerCase();
   };
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {

@@ -2,16 +2,12 @@
   margin: $margin-xs auto $margin-xs;
   width: $width-xs;
   text-align: center;
-
-  @media (max-width: $tablet) {
-    width: $width-xl;
-  }
 }
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   line-height: 48px;
   letter-spacing: -2px;
   color: $primary-color;
@@ -24,12 +20,12 @@
 
 .text {
   margin-bottom: $margin-xs;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   line-height: 28px;
   color: $medium-gray-color;
 
   @media (max-width: $tablet) {
-    font-size: 12px;
+    font-size: $fontSize-xxxxs;
     line-height: 16px;
   }
 }
@@ -42,8 +38,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: $fontWeight-m;
+  font-size: $fontSize-xs;
   line-height: 24px;
   color: $primary-color;
   transition: all 0.8s;

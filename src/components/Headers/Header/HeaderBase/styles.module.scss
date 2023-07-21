@@ -8,8 +8,7 @@
 
 .switcher {
   @include flex-between-center();
-  padding-left: $padding-m;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   text-transform: uppercase;
 }
 

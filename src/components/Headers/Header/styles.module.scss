@@ -25,8 +25,8 @@
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: $fontSize-s;
+  font-weight: $fontWeight-m;
   color: $white-color;
 
   @media (max-width: $tablet) {

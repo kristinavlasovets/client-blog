@@ -9,11 +9,11 @@ $gray-color: #f4f4f4;
 $lavender-color: #f4f0f8;
 $beige-color: #fcf7eb;
 $white-color: #ffffff;
+$translusent-color: rgba(0, 0, 0, 0.1);
 
 $width-xxl: 100%;
-$width-xl: 95%;
-$width-ll: 90%;
-$width-ml: 70%;
+$width-ll: 1280px;
+$width-ml: 1024px;
 $width-l: 780px;
 $width-m: 700px;
 $width-mm: 580px;
@@ -27,14 +27,38 @@ $height-ss: 76px;
 $height-m: 144px;
 $height-xxl: 100%;
 
-$margin-xxxs: 2%;
-$margin-xs: 6%;
-$margin-s: 10%;
+$margin-xxxs: 22px;
+$margin-xs: 36px;
+$margin-s: 90px;
 
-$padding-xxs: 4%;
-$padding-xs: 6%;
-$padding-s: 10%;
-$padding-m: 20%;
+$padding-xxs: 22px;
+$padding-xs: 30px;
+$padding-s: 46px;
+$padding-m: 72px;
+
+$fontSize-xxxxs: 12px;
+$fontSize-xxxs: 14px;
+$fontSize-xxs: 16px;
+$fontSize-xs: 18px;
+$fontSize-s: 22px;
+$fontSize-ss: 24px;
+$fontSize-sm: 28px;
+$fontSize-m: 36px;
+$fontSize-l: 48px;
+$fontSize-ll: 56px;
+
+$fontWeight-xs: 500;
+$fontWeight-s: 600;
+$fontWeight-m: 700;
+$fontWeight-l: 900;
+
+$opacity-xs: 0;
+$opacity-s: 0.6;
+$opacity-m: 0.8;
+$opacity-l: 1;
+
+$zIndex-l: 1000;
+$zIndex-xl: 2000;
 
 $mobile: 495px;
 $tablet: 768px;
@@ -53,9 +77,9 @@ $bigScreen: 1920px;
   $lavender-color: $lavender-color;
   $beige-color: $beige-color;
   $white-color: $white-color;
+  $translusent-color: $translusent-color;
 
   $width-xxl: $width-xxl;
-  $width-xl: $width-xl;
   $width-ll: $width-ll;
   $width-ml: $width-ml;
   $width-l: $width-l;
@@ -84,4 +108,28 @@ $bigScreen: 1920px;
   $tablet: $tablet;
   $laptop: $laptop;
   $bigScreen: $bigScreen;
+
+  $fontSize-xxxxs: $fontSize-xxxxs;
+  $fontSize-xxxs: $fontSize-xxxs;
+  $fontSize-xxs: $fontSize-xxs;
+  $fontSize-xs: $fontSize-xs;
+  $fontSize-s: $fontSize-s;
+  $fontSize-ss: $fontSize-ss;
+  $fontSize-sm: $fontSize-sm;
+  $fontSize-m: $fontSize-m;
+  $fontSize-l: $fontSize-l;
+  $fontSize-ll: $fontSize-ll;
+
+  $fontWeight-xs: $fontWeight-xs;
+  $fontWeight-s: $fontWeight-s;
+  $fontWeight-m: $fontWeight-m;
+  $fontWeight-l: $fontWeight-l;
+
+  $opacity-xs: $opacity-xs;
+  $opacity-s: $opacity-s;
+  $opacity-m: $opacity-m;
+  $opacity-l: $opacity-l;
+
+  $zIndex-l: $zIndex-l;
+  $zIndex-xl: $zIndex-xl;
 }

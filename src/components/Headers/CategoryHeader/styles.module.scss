@@ -1,41 +1,40 @@
 .wrapper {
   margin-bottom: $margin-xs;
-  padding: $padding-xs 0 $padding-xs;
-  width: $width-xxl;
+  padding: $padding-s 0 $padding-s;
   background-color: $lavender-color;
   text-align: center;
 }
 
 .title {
   margin-bottom: $margin-xxxs;
-  font-size: 56px;
+  font-size: $fontSize-ll;
   color: $primary-color;
-  font-weight: 700;
+  font-weight: $fontWeight-m;
   line-height: 64px;
   letter-spacing: -1px;
 
   @media (max-width: $tablet) {
-    font-size: 28px;
+    font-size: $fontSize-sm;
     line-height: 32px;
   }
 }
 
 .info {
   margin-bottom: $margin-xxxs;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   color: $medium-gray-color;
   line-height: 28px;
 
   @media (max-width: $tablet) {
-    font-size: 14px;
+    font-size: $fontSize-xxxs;
     line-height: 16px;
   }
 }
 
 .navigation {
   @include flex-center-center();
-  font-size: 16px;
-  font-weight: 500;
+  font-size: $fontSize-xxs;
+  font-weight: $fontWeight-xs;
   text-transform: uppercase;
   color: $primary-color;
   line-height: 20px;
@@ -53,7 +52,7 @@
   }
 
   @media (max-width: $tablet) {
-    font-size: 14px;
+    font-size: $fontSize-xxxs;
     line-height: 16px;
   }
 }

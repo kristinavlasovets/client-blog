@@ -19,9 +19,10 @@ const BlogPostItem: FC<BlogPostItemProps> = (props) => {
 
   const { t } = useMyTranslation();
 
-  const { icon, title: categoryTitle } = categories.find(
-    ({ title }) => title.toLocaleLowerCase() === category
-  )!;
+  const { icon, title: categoryTitle } = useMemo(
+    () => categories.find(({ title }) => title.toLocaleLowerCase() === category)!,
+    [category]
+  );
 
   const { image: currentAuthorImage, name: currentAuthorName } = useMemo(
     () => findAuthorById(Number(authorId)),

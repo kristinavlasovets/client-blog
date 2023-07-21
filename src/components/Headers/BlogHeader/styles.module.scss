@@ -9,6 +9,11 @@
   @include flex-between-center();
   margin: 0 auto;
   width: $width-ll;
+
+  @media (max-width: $tablet) {
+    text-align: center;
+    width: fit-content;
+  }
 }
 
 .post {
@@ -18,30 +23,30 @@
   justify-content: center;
 
   @media (max-width: $tablet) {
-    width: $width-ll;
+    width: fit-content;
   }
 }
 
 .label {
   margin-bottom: $margin-xs;
   text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: $fontSize-xxs;
+  font-weight: $fontWeight-xs;
   letter-spacing: 3px;
   color: $primary-color;
 }
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   color: $primary-color;
 }
 
 .info {
   margin-bottom: $margin-xs;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: $fontSize-xxxs;
+  font-weight: $fontWeight-xs;
   color: $dark-gray-color;
 
   a {
@@ -56,7 +61,7 @@
 
 .preview {
   margin-bottom: $margin-xs;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   color: $medium-gray-color;
 }
 
@@ -67,8 +72,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: $fontWeight-m;
+  font-size: $fontSize-xs;
   color: $primary-color;
   transition: transform 250ms;
   cursor: pointer;
@@ -76,6 +81,10 @@
   &:hover {
     background-color: $dark-yellow-color;
     transform: translateX(10px);
+  }
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
   }
 }
 

@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  margin-bottom: $margin-xs;
+  margin-bottom: $margin-s;
   width: $width-xxl;
   display: flex;
   justify-content: flex-end;
@@ -8,18 +8,23 @@
   @media (max-width: $laptop) {
     flex-direction: column;
   }
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .header {
   position: absolute;
   width: $width-mm;
-  padding: $padding-xs;
+  padding: $padding-s;
   top: 0;
   left: 8%;
   background-color: $white-color;
   color: $primary-color;
 
-  z-index: 1000;
+  z-index: $zIndex-l;
 
   @media (max-width: $laptop) {
     position: relative;
@@ -34,41 +39,41 @@
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: $fontSize-xxs;
+  font-weight: $fontWeight-xs;
   text-transform: uppercase;
   line-height: 20px;
   letter-spacing: 3px;
 
   @media (max-width: $tablet) {
-    font-size: 12px;
+    font-size: $fontSize-xxxxs;
     line-height: 14px;
   }
 }
 
 .headerTitle {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: $fontSize-l;
+  font-weight: $fontWeight-m;
   line-height: 64px;
   letter-spacing: -2px;
 
   @media (max-width: $tablet) {
-    font-size: 28px;
+    font-size: $fontSize-sm;
     line-height: 32px;
   }
 }
 
 .text {
   margin-top: $margin-xs;
+  margin-bottom: $margin-xs;
   width: $width-s;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   color: $dark-gray-color;
   line-height: 28px;
 
   @media (max-width: $laptop) {
-    margin: 0 auto;
     width: $width-m;
-    font-size: 12px;
+    font-size: $fontSize-xxxxs;
     line-height: 14px;
   }
 

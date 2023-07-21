@@ -5,7 +5,7 @@
 .errorMessage {
   margin-top: $margin-xs;
   text-align: center;
-  font-size: 36px;
+  font-size: $fontSize-m;
   color: $purple-color;
 }
 
@@ -17,8 +17,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: $fontWeight-m;
+  font-size: $fontSize-xs;
   line-height: 24px;
   color: $primary-color;
   transition: all 0.8s;

@@ -1,44 +1,45 @@
 .wrapper {
   margin: $margin-xs auto $margin-xs;
-  width: $width-ll;
   margin: 0 auto;
   color: $primary-color;
   border-bottom: 1px solid $gray-color;
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   line-height: 48px;
   letter-spacing: -2px;
 
   @media (max-width: $tablet) {
-    font-size: 24px;
+    font-size: $fontSize-ss;
     line-height: 36px;
   }
 }
 
 .posts {
-  @include flex-between-center();
+  @include flex-between-start();
   margin-bottom: $margin-xs;
-  width: $width-xxl;
 
   @media (max-width: $tablet) {
     @include flex-column-center();
     margin: 0 auto;
     margin-bottom: $margin-s;
-    width: $width-ll;
   }
 }
 
 .message {
   margin-bottom: $margin-xs;
-  width: $width-xxl;
-  font-size: 22px;
+  font-size: $fontSize-s;
   color: $dark-yellow-color;
 
   @media (max-width: $tablet) {
-    font-size: 18px;
+    font-size: $fontSize-xs;
   }
 }

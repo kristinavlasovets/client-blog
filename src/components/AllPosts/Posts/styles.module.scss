@@ -1,37 +1,35 @@
 .message {
   margin-bottom: $margin-xs;
-  width: $width-xxl;
   text-align: center;
-  font-size: 22px;
+  font-size: $fontSize-s;
   color: $dark-gray-color;
 }
 
 .wrapper {
   margin: 0 auto;
   margin-bottom: $margin-xs;
-  width: $width-l;
+  margin-right: $margin-xs;
 
   @media (max-width: $tablet) {
-    width: $width-xxl;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
 .title {
-  width: $width-xxl;
   padding-bottom: $padding-xs;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: $fontSize-l;
+  font-weight: $fontWeight-m;
   line-height: 64px;
   letter-spacing: -2px;
   color: $primary-color;
-
   border-bottom: 1px solid $gray-color;
 
   @media (max-width: $tablet) {
-    width: $width-ll;
     margin: 0 auto;
-    font-size: 36px;
-    font-weight: 600;
+    font-size: $fontSize-m;
+    font-weight: $fontWeight-s;
     line-height: 42px;
   }
 }
@@ -45,8 +43,8 @@
 }
 
 .button {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: $fontSize-sm;
+  font-weight: $fontWeight-m;
   letter-spacing: -1px;
   color: $primary-color;
   border: none;
@@ -58,10 +56,15 @@
     color: $yellow-color;
     transform: translateX(-10px);
   }
+
+  @media (max-width: $tablet) {
+    font-size: $fontSize-xxs;
+    font-weight: $fontWeight-s;
+  }
 }
 
 .disabled {
-  font-size: 24px;
+  font-size: $fontSize-ss;
   line-height: 32px;
   letter-spacing: 0;
   color: $medium-gray-color;

@@ -1,6 +1,10 @@
 .wrapper {
-  margin: $margin-xs auto $margin-xs;
-  width: $width-ll;
+  margin: $margin-s auto $margin-xs;
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .headerWrapper {
@@ -13,7 +17,7 @@
   margin: 0 auto;
 
   @media (max-width: $tablet) {
-    width: $width-ll;
+    width: fit-content;
   }
 }
 
@@ -38,8 +42,8 @@
 }
 
 .name {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: $fontSize-sm;
+  font-weight: $fontWeight-m;
   color: $purple-color;
   line-height: 40px;
   letter-spacing: -1px;
@@ -52,32 +56,32 @@
   }
 
   @media (max-width: $tablet) {
-    font-size: 18px;
+    font-size: $fontSize-xs;
     line-height: 20px;
   }
 }
 
 .createdAt {
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   color: $medium-gray-color;
   line-height: 28px;
 
   @media (max-width: $tablet) {
-    font-size: 12px;
+    font-size: $fontSize-xxxxs;
     line-height: 18px;
   }
 }
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 48px;
+  font-size: $fontSize-l;
   color: $primary-color;
-  font-weight: 700;
+  font-weight: $fontWeight-m;
   line-height: 64px;
   letter-spacing: -2px;
 
   @media (max-width: $tablet) {
-    font-size: 24px;
+    font-size: $fontSize-ss;
     line-height: 32px;
   }
 }
@@ -101,8 +105,8 @@
 }
 
 .categoryTitle {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: $fontSize-ss;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   line-height: 32px;
   cursor: pointer;
@@ -114,7 +118,7 @@
   }
 
   @media (max-width: $tablet) {
-    font-size: 18px;
+    font-size: $fontSize-xs;
     line-height: 22px;
   }
 }
@@ -133,27 +137,27 @@
 
   h3 {
     margin-bottom: $margin-xs;
-    font-size: 36px;
-    font-weight: 700;
+    font-size: $fontSize-m;
+    font-weight: $fontWeight-m;
     line-height: 48px;
     letter-spacing: -2px;
     color: $primary-color;
 
     @media (max-width: $tablet) {
-      font-size: 22px;
-      font-weight: 600;
+      font-size: $fontSize-s;
+      font-weight: $fontWeight-s;
       line-height: 26px;
     }
   }
 
   p {
     margin-bottom: $margin-xs;
-    font-size: 16px;
+    font-size: $fontSize-xxs;
     line-height: 28px;
     color: $medium-gray-color;
 
     @media (max-width: $tablet) {
-      font-size: 16px;
+      font-size: $fontSize-xxs;
       line-height: 18px;
     }
   }
@@ -163,21 +167,21 @@
   }
 
   li {
-    font-size: 24px;
+    font-size: $fontSize-ss;
     line-height: 32px;
     list-style: inside disc;
-    font-weight: 700;
+    font-weight: $fontWeight-m;
     letter-spacing: 1px;
     color: $primary-color;
-    opacity: 0.8;
+    opacity: $opacity-m;
 
     @media (max-width: $tablet) {
-      font-size: 16px;
+      font-size: $fontSize-xxs;
       line-height: 18px;
     }
   }
 
   @media (max-width: $tablet) {
-    width: $width-ll;
+    width: fit-content;
   }
 }

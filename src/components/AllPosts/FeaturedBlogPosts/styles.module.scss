@@ -1,13 +1,11 @@
 .wrapper {
   @include flex-between-center();
   @include enter-animation();
-  width: $width-ll;
   margin: 0 auto;
   margin-bottom: $margin-xs;
 
   @media (max-width: $tablet) {
     @include flex-column-center();
-    width: $width-xxl;
   }
 }
 
@@ -16,11 +14,8 @@
 }
 
 .content {
-  width: $width-mm;
-
   @media (max-width: $tablet) {
     margin-bottom: $margin-xs;
-    width: $width-ll;
   }
 }
 
@@ -37,6 +32,11 @@
       color: $dark-yellow-color;
       transform: scale(1.1);
     }
+
+    @media (max-width: $tablet) {
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 
   @media (max-width: $tablet) {
@@ -46,15 +46,17 @@
 }
 
 .title {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   line-height: 48px;
   letter-spacing: -2px;
 
   @media (max-width: $tablet) {
-    font-size: 22px;
-    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $fontSize-s;
+    font-weight: $fontWeight-s;
     color: $primary-color;
     line-height: 24px;
   }

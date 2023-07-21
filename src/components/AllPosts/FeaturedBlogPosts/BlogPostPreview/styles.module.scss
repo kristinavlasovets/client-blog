@@ -9,8 +9,8 @@
 
 .info {
   margin-bottom: $margin-xxxs;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: $fontSize-xxxs;
+  font-weight: $fontWeight-xs;
   color: $medium-gray-color;
 
   a {
@@ -23,15 +23,15 @@
   }
 
   @media (max-width: $tablet) {
-    font-size: 10px;
+    font-size: $fontSize-xxxxs;
     line-height: 14px;
   }
 }
 
 .title {
   display: block;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: $fontSize-ss;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   line-height: 32px;
   transition: all 0.2s ease-in-out;
@@ -41,8 +41,8 @@
   }
 
   @media (max-width: $tablet) {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: $fontSize-xs;
+    font-weight: $fontWeight-s;
     line-height: 24px;
   }
 }

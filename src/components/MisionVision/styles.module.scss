@@ -1,21 +1,19 @@
 .wrapper {
   @include enter-animation();
   position: relative;
-  width: $width-xxl;
   margin: 0 auto;
   padding-bottom: $padding-xs;
   background-color: $lavender-color;
 }
 
 .main {
-  width: $width-ll;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
 
   a {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: $fontSize-xs;
+    font-weight: $fontWeight-m;
     line-height: 32px;
     color: $purple-color;
     transition: all 0.2s ease-in-out;
@@ -37,14 +35,16 @@
   color: $primary-color;
 
   @media (max-width: $tablet) {
-    width: $width-ll;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
   }
 }
 
 .label {
   margin-bottom: $margin-xs;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: $fontSize-xxs;
+  font-weight: $fontWeight-s;
   text-transform: uppercase;
   line-height: 20px;
   letter-spacing: 3px;
@@ -52,8 +52,8 @@
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 28px;
-  font-weight: 700;
+  font-size: $fontSize-sm;
+  font-weight: $fontWeight-m;
   line-height: 40px;
   letter-spacing: -1px;
   transition: all 0.2s ease-in-out;
@@ -64,14 +64,14 @@
   }
 
   @media (max-width: $tablet) {
-    font-size: 18px;
+    font-size: $fontSize-xs;
     line-height: 20px;
   }
 }
 
 .text {
   margin-bottom: $margin-xs;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   color: $dark-gray-color;
   line-height: 28px;
 }

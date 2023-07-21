@@ -5,14 +5,14 @@
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   line-height: 48px;
   letter-spacing: -2px;
 
   @media (max-width: $tablet) {
-    font-size: 28px;
+    font-size: $fontSize-sm;
     line-height: 32px;
   }
 }

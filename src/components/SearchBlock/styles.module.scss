@@ -11,7 +11,7 @@
   margin-bottom: $margin-xs;
   font-size: 32px;
   color: $primary-color;
-  font-weight: 700;
+  font-weight: $fontWeight-m;
   line-height: 42px;
   letter-spacing: -2px;
 }
@@ -32,8 +32,8 @@
   border: 2px solid $medium-gray-color;
   border-radius: 32px;
   color: $medium-gray-color;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: $fontSize-xxxs;
+  font-weight: $fontWeight-m;
   cursor: pointer;
 
   &:hover {

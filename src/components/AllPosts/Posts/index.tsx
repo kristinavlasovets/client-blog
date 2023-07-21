@@ -10,12 +10,11 @@ import { PostsProps } from './types';
 import styles from './styles.module.scss';
 
 const Posts: FC<PostsProps> = (props) => {
-  const { lng, postsTitle, posts } = props;
-
-  const { t } = serverTranslation(lng);
-
   const [currentPage, setCurrentPage] = useState(0);
   const ref = useRef<HTMLInputElement>(null);
+
+  const { lng, postsTitle, posts } = props;
+  const { t } = serverTranslation(lng);
 
   const postsAtPage = 5;
 

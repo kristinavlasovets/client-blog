@@ -1,25 +1,31 @@
-import React, { FC } from 'react';
+'use client';
+
+import React, { FC, useMemo } from 'react';
 
 import BlogPostItem from '@/components/AllPosts/BlogPostItem';
 import RelatedBlogPosts from '@/components/AllPosts/RelatedBlogPosts';
 import JoinOurTeam from '@/components/JoinOurTeam';
+import Layout from '@/components/Layout';
 import posts from '@/shared/posts.json';
 
 import { BlogPostPageProps } from './types';
 
-import styles from './styles.module.scss';
-
 const BlogPost: FC<BlogPostPageProps> = ({ params: { lng, id } }) => {
-  const currentBlogPost = posts.filter((blogPost) => blogPost.id === Number(id))[0];
+  const currentBlogPost = useMemo(
+    () => posts.filter((blogPost) => blogPost.id === Number(id))[0],
+    [id]
+  );
 
   return (
-    <div className={styles.wrapper}>
-      <BlogPostItem blogPost={currentBlogPost} />
-      <RelatedBlogPosts
-        category={currentBlogPost.category}
-        blogPostId={currentBlogPost.id}
-        lng={lng}
-      />
+    <div>
+      <Layout>
+        <BlogPostItem blogPost={currentBlogPost} />
+        <RelatedBlogPosts
+          category={currentBlogPost.category}
+          blogPostId={currentBlogPost.id}
+          lng={lng}
+        />
+      </Layout>
       <JoinOurTeam lng={lng} />
     </div>
   );

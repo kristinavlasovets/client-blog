@@ -5,12 +5,11 @@ import React, { FC, useMemo } from 'react';
 import { useMyTranslation } from '@/app/i18n/client';
 import Posts from '@/components/AllPosts/Posts';
 import AuthorHeader from '@/components/Headers/AuthorHeader';
+import Layout from '@/components/Layout';
 import posts from '@/shared/posts.json';
 import { findAuthorById } from '@/utils/findAuthorById';
 
 import { AuthorPageProps } from './types';
-
-import styles from './styles.module.scss';
 
 const Author: FC<AuthorPageProps> = ({ params: { lng, id } }) => {
   const { t } = useMyTranslation();
@@ -20,10 +19,13 @@ const Author: FC<AuthorPageProps> = ({ params: { lng, id } }) => {
     [id]
   );
 
-  const postsByAuthor = posts.filter(({ authorId }) => authorId === Number(id));
+  const postsByAuthor = useMemo(
+    () => posts.filter(({ authorId }) => authorId === Number(id)),
+    [id]
+  );
 
   return (
-    <div className={styles.wrapper}>
+    <div>
       <AuthorHeader
         lng={lng}
         name={name}
@@ -34,7 +36,9 @@ const Author: FC<AuthorPageProps> = ({ params: { lng, id } }) => {
         facebook={facebook}
         instagram={instagram}
       />
-      <Posts lng={lng} posts={postsByAuthor} postsTitle={t('Author.title')} />
+      <Layout>
+        <Posts lng={lng} posts={postsByAuthor} postsTitle={t('Author.title')} />
+      </Layout>
     </div>
   );
 };

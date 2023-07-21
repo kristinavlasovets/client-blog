@@ -15,9 +15,9 @@
 
 .info {
   margin-bottom: $margin-xs;
-  font-size: 14px;
+  font-size: $fontSize-xxxs;
   color: $dark-gray-color;
-  font-weight: 500;
+  font-weight: $fontWeight-xs;
 
   a {
     color: $purple-color;
@@ -32,9 +32,9 @@
 
 .title {
   margin-bottom: $margin-xs;
-  font-size: 28px;
+  font-size: $fontSize-sm;
   color: $primary-color;
-  font-weight: 700;
+  font-weight: $fontWeight-m;
   line-height: 40px;
   transition: all 0.2s ease-in-out;
 
@@ -43,18 +43,18 @@
   }
 
   @media (max-width: $tablet) {
-    font-size: 22px;
+    font-size: $fontSize-s;
     line-height: 28px;
   }
 }
 
 .preview {
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   color: $dark-gray-color;
   line-height: 28px;
 
   @media (max-width: $tablet) {
-    font-size: 14px;
+    font-size: $fontSize-xxxs;
     line-height: 22px;
   }
 }

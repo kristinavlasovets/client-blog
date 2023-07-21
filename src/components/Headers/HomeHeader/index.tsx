@@ -4,19 +4,23 @@ import React, { FC, useMemo } from 'react';
 import Link from 'next/link';
 
 import { useMyTranslation } from '@/app/i18n/client';
-import { homeHeaderBackgroundColor, homeHeaderBorderBackgroundColor } from '@/constants';
+import { homeHeaderBackgroundColors } from '@/constants';
 import posts from '@/shared/posts.json';
 import { findAuthorById } from '@/utils/findAuthorById';
 
 import styles from './styles.module.scss';
 
+const { title, authorId, createdAt, id, image, preview, category } = posts[0];
+
 const HomeHeader: FC = () => {
   const { t } = useMyTranslation();
-  const { title, authorId, createdAt, id, image, preview, category } = posts[0];
+
   const { name } = useMemo(() => findAuthorById(Number(id)), [id]);
 
+  const { mainColor, borderColor } = homeHeaderBackgroundColors;
+
   const backgroundStyle = {
-    background: `linear-gradient(${homeHeaderBackgroundColor}, ${homeHeaderBorderBackgroundColor}), url(${image})`,
+    background: `linear-gradient(${mainColor}, ${borderColor}), url(${image})`,
   };
 
   return (

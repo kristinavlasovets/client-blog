@@ -15,6 +15,7 @@ const RelatedBlogPost: FC<RelatedBlogPostProps> = (props) => {
   const {
     blogPost: { authorId, createdAt, image, title, preview, id },
   } = props;
+
   const { t } = useMyTranslation();
 
   const { name } = useMemo(() => findAuthorById(Number(authorId)), [authorId]);

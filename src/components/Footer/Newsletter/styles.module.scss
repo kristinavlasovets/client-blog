@@ -8,7 +8,7 @@
 .form {
   @include flex-between-center();
   margin: 0 auto;
-  width: $width-xl;
+  padding: $padding-s;
 
   @media (max-width: $laptop) {
     flex-direction: column;
@@ -23,26 +23,27 @@
 .title {
   width: $width-s;
   padding-left: $padding-xxs;
-  font-size: 34px;
-  font-weight: 700;
+  font-size: $fontSize-m;
+  font-weight: $fontWeight-m;
   color: $white-color;
 
   @media (max-width: $tablet) {
-    font-size: 22px;
-    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    font-size: $fontSize-s;
+    font-weight: $fontWeight-s;
   }
 
   @media (max-width: $laptop) {
     margin: $margin-xs 0 $margin-xs;
-    width: $width-ll;
-    font-size: 22px;
-    font-weight: 600;
+    width: fit-content;
+    font-size: $fontSize-s;
+    font-weight: $fontWeight-s;
   }
 }
 
 .main {
   display: flex;
-  width: $width-xl;
   justify-content: space-evenly;
 
   @media (max-width: $mobile) {
@@ -64,7 +65,7 @@
   }
 
   @media (max-width: $mobile) {
-    width: $width-xl;
+    width: fit-content;
   }
 }
 
@@ -73,7 +74,7 @@
   height: $height-s;
   background: transparent;
   padding: 0 $padding-s 0 $padding-s;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   border: 1px solid $dark-gray-color;
   color: $white-color;
 
@@ -91,15 +92,15 @@
   width: 180px;
   height: $height-s;
   background-color: $yellow-color;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: $fontSize-xs;
+  font-weight: $fontWeight-m;
   color: $primary-color;
   border: none;
   cursor: pointer;
   transition: transform 250ms;
 
   &:hover {
-    opacity: 0.8;
+    opacity: $opacity-m;
     transform: translateX(-10px);
   }
 
@@ -121,13 +122,13 @@
   padding: 20px;
   background-color: $purple-color;
   color: $beige-color;
-  font-size: 16px;
+  font-size: $fontSize-xxs;
   border-radius: 10px;
-  opacity: 0.8;
+  opacity: $opacity-m;
   border: none;
   cursor: pointer;
 
-  z-index: 1000;
+  z-index: $zIndex-l;
 }
 
 .errorMessage {
